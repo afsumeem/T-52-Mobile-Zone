@@ -3,7 +3,7 @@ import { faMapMarkerAlt, faPaperPlane, faPhone } from '@fortawesome/free-solid-s
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Button, Col, Container, Nav, Row } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -13,11 +13,11 @@ const Footer = () => {
                 <Row className='pt-4 pb-2 gx-4 gy-3 m-0'>
                     <Col md={3} sm={6} xs={12}>
 
-                        <h5 className='mb-4'>ADDRESS</h5>
+                        <h5 className='mb-4 footer-title'>ADDRESS</h5>
 
                         {/* footer contents */}
                         <div className='d-flex '>
-                            <FontAwesomeIcon icon={faMapMarkerAlt} className='mt-2' />
+                            <FontAwesomeIcon icon={faMapMarkerAlt} className='mt-2 fs-4 footer-text' />
 
                             <p className='ms-3'>205 Lake street, Mountain View,
                                 <span className="fs-6">San Francisco, Callifornia</span>
@@ -26,19 +26,19 @@ const Footer = () => {
                             </p>
                         </div>
                         <div className='d-flex '>
-                            <FontAwesomeIcon icon={faPhone} className='footer-text mt-1' />
+                            <FontAwesomeIcon icon={faPhone} className='footer-text mt-1 fs-4' />
 
-                            <p className="fs-6 footer-text ms-3">+11 555 123-456 </p>
+                            <p className="fs-6 ms-3">+11 555 123-456 </p>
                         </div>
 
                         <div className='d-flex'>
-                            <FontAwesomeIcon icon={faPaperPlane} className='footer-text mt-1' />
-                            <p className='footer-text ms-3'>support@hs.com </p>
+                            <FontAwesomeIcon icon={faPaperPlane} className='footer-text mt-1 fs-4' />
+                            <p className=' ms-3'>support@hs.com </p>
                         </div>
                     </Col>
 
                     <Col md={3} sm={6} xs={12}>
-                        <h5 className='mb-4'>LATEST NEWS</h5>
+                        <h5 className='mb-4 footer-title'>LATEST NEWS</h5>
                         <div className='d-flex'>
                             <img src="https://i.ibb.co/6WkCYfF/img.jpg" className='footer-latest-news-img img-fluid' alt="" />
 
@@ -60,9 +60,8 @@ const Footer = () => {
                     </Col>
 
                     <Col md={3} sm={6} xs={12}>
-                        <h5 className='mb-4 text-center'>QUICK LINKS</h5>
-                        <div className='d-block m-auto w-25'>
-
+                        <div className='ms-md-5'>
+                            <h5 className='mb-4 footer-title'>QUICK LINKS</h5>
 
                             <Nav.Link as={Link} to="/home" className='text-dark text-decoration-none'>Home</Nav.Link>
                             <Nav.Link as={Link} to="/shop" className='text-dark text-decoration-none'>Shop</Nav.Link>
@@ -74,7 +73,7 @@ const Footer = () => {
                     </Col>
 
                     <Col md={3} sm={6} xs={12}>
-                        <h5 className='mb-4'>SUBSCRIBE NEWSLETTER</h5>
+                        <h5 className='mb-4 footer-title'>SUBSCRIBE NEWSLETTER</h5>
                         <div class="input-group mb-3 pt-5">
                             <input type="text" className="form-control footer-input" placeholder="Enter Email Address" aria-label="Recipient's username" aria-describedby="basic-addon2" />
 
@@ -106,14 +105,10 @@ const Footer = () => {
                     <hr />
                 </Row>
                 <div className='d-md-flex justify-content-between '>
-                    <p>Copyright &copy;2021 All Rights Reserved </p>
+                    <p className='text-sm-center'>Copyright &copy;2021 All Rights Reserved </p>
 
-                    <p>This Website is made with &#x003C;&#10083;&#x003E; by Team 52 </p>
+                    <p className='text-sm-center'>This Website is made with &#x003C;&#10083;&#x003E; by Team 52 </p>
                 </div>
-
-
-
-
             </Container >
         </div >
     );

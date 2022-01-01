@@ -29,3 +29,17 @@ width: 80px;
 .social-icon{
     border: 1px solid #f79837;
 }
+.footer-title{
+position: relative;
+}
+
+.footer-title:after{
+    content: "";
+        
+        width: 40px;
+        height: 2px;
+        background: #f79837;
+        left: 0;
+        top: 100%;
+        position: absolute;
+}
