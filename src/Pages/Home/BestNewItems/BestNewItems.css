@@ -1,0 +1,25 @@
+.best_new_card{
+    display: flex;
+    flex-direction: row;
+    background: #fef5ef;
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.bg-2{
+    background: #7d54f261 !important;
+}
+
+.best_new_card .card-body{
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+
+.best_new_card img{
+    position: absolute;
+    width: 50%;
+    top: 25px;
+    right: 25px;
+}
