@@ -1,0 +1,31 @@
+.footer-container{
+    background: linear-gradient(90deg, rgba(255,200,163,1) 0%, rgba(247,232,222,1) 63%);
+}
+
+.footer-text{
+    color:#f79837
+}
+
+.footer-latest-news-img{
+    border-radius: 10%;
+height: 80px;
+width: 80px;
+}
+
+.input-background{
+    background-color: #f79837;
+}
+
+.input-background:hover{
+     background-color: #fea144;
+}
+
+.footer-input{
+    border: 3px solid #f79837;
+}
+.footer-input:hover{
+    border: 3px solid #b55c02;
+}
+.social-icon{
+    border: 1px solid #f79837;
+}

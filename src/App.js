@@ -1,4 +1,5 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './Pages/Home/Home/Home';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Footer from './Pages/Shared/Footer/Footer';
