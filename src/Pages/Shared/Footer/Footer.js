@@ -2,8 +2,8 @@ import { faDiscord, faFacebook, faInstagram, faSkype, faTwitter } from '@fortawe
 import { faMapMarkerAlt, faPaperPlane, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { Button, Col, Container, Nav, Row } from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -62,11 +62,14 @@ const Footer = () => {
                     <Col md={3} sm={6} xs={12}>
                         <h5 className='mb-4 text-center'>QUICK LINKS</h5>
                         <div className='d-block m-auto w-25'>
-                            <NavLink to='/home' className='text-dark text-decoration-none'>Home</NavLink><br />
-                            <NavLink to='/home' className='text-dark  text-decoration-none'>Home</NavLink><br />
-                            <NavLink to='/home' className='text-dark  text-decoration-none'>Home</NavLink><br />
-                            <NavLink to='/home' className='text-dark  text-decoration-none'>Home</NavLink><br />
-                            <NavLink to='/home' className='text-dark  text-decoration-none'>Home</NavLink><br />
+
+
+                            <Nav.Link as={Link} to="/home" className='text-dark text-decoration-none'>Home</Nav.Link>
+                            <Nav.Link as={Link} to="/shop" className='text-dark text-decoration-none'>Shop</Nav.Link>
+                            <Nav.Link as={Link} to="/category" className='text-dark text-decoration-none'>Category</Nav.Link>
+                            <Nav.Link as={Link} to="/blog" className='text-dark text-decoration-none'>Blogs</Nav.Link>
+                            <Nav.Link as={Link} to="/about" className='text-dark text-decoration-none'>About</Nav.Link>
+
                         </div>
                     </Col>
 
