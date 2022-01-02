@@ -1,14 +1,47 @@
-.text-style {
-  color: rgb(243, 44, 77);
+.carousel-inner{
+  padding: 40px 0 70px;
 }
-.buynow-btn {
-  background-color: rgb(243, 44, 77);
-  font-weight: 400;
-  border: none;
+.carousel_content{
+  padding-left: 80px;
 }
-.buynow-btn:hover {
-  background-color: rgb(230, 153, 11);
-  font-weight: 400;
-  border: none;
-  color: rgb(0, 0, 0);
+
+.carousel_content h1{
+  font-size: 3.5rem;
+  color: #fff;
+}
+
+.carousel_content h2{
+  color: #fff;
+  margin: 0;
+}
+
+.carousel_content p{
+  font-size: 1.5rem;
+}
+
+.carousel_bottom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carousel_bottom .product_price{
+  font-size: 1.5rem;
+}
+
+.carousel_content .btn_regular{
+  color: #fff !important;
+  border: 1px solid #fff !important;
+  font-size: 1.3rem;
+}
+
+.carousel-indicators .active{
+  border: 2px solid var(--red) !important;
+}
+
+.carousel-indicators [data-bs-target] {
+  height: 12px;
+  width: 12px;
+  border: 2px solid #fff;
+  border-radius: 50%;
 }
