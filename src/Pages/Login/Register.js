@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useFirebase from "../Hooks/useFirebase";
 
 const Register = () => {
   const [loginData, setLoginData] = useState({});
   const { registerUser, signInWithGoogle } = useFirebase();
+
+  const location = useLocation();
   const navigate = useNavigate();
 
   const handleOnChange = (e) => {
@@ -21,12 +23,12 @@ const Register = () => {
     if (loginData.password !== loginData.password2) {
       alert("your password did not match");
     }
-    registerUser(loginData.email, loginData.password, loginData.name, navigate);
-    alert("register successfull");
+    registerUser(loginData.email, loginData.password, loginData.name, location, navigate);
+
     e.preventDefault();
   };
   const handleGoogleSignIn = () => {
-    signInWithGoogle(navigate);
+    signInWithGoogle(location, navigate);
   };
   return (
     <div className="container  ">
