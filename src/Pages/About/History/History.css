@@ -1,0 +1,9 @@
+.history{
+    background-image: url(../../../images/background.jpg);
+    background-attachment: fixed;
+}
+
+.history-background{
+    padding-top:100px;
+    padding-bottom:100px;
+}

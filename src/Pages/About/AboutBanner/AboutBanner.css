@@ -1,0 +1,23 @@
+.topAbout-banner{
+    background-image: url(../../../images/banner1.jpg);
+    background-attachment: fixed;
+    height: 45vh;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+}
+
+.banner-title{
+    width: 100%;
+}
+.title-head{
+    font-size: 50px;
+}
+.top-line{
+    padding: 1px;
+    background-color: white;
+}
+
+.special-font{
+    font-family: josefin-sans, sans-serif;
+}
