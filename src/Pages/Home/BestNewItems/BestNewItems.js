@@ -4,7 +4,7 @@ import "./BestNewItems.css";
 
 const BestNewItems = () => {
     return (
-        <Container fluid>
+        <Container fluid className="my-5">
             <div className="row gx-4">
                 <div className="col-md-4">
                     <Card className="best_new_card">

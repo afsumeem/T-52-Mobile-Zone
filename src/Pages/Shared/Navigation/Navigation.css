@@ -1,6 +1,6 @@
 /* top nav */
 .search_input{
-    border: 1px solid #f79837;
+    border: 1px solid var(--orange);
     transition: all .3s ease-in-out;
 }
 
@@ -9,7 +9,7 @@
 }
 
 .search_btn{
-    background: #f79837;
+    background: var(--orange);
     color: #fff;
     border: none;
     transition: all .3s ease-in-out;
@@ -56,7 +56,7 @@
     transition: all .3s ease-in-out;
 }
 .nav-link:hover{
-    color: #f79837 !important;
+    color: var(--orange) !important;
 }
 
 /* right nav icon */
@@ -70,13 +70,13 @@
 
 .nav_icon:hover{
     font-size: 22px;
-    color: #f79837 !important;
+    color: var(--orange) !important;
 }
 
 .nav_icon span{
     font-size: 11px;
     color: #fff;
-    background: #f79837 !important;
+    background: var(--orange) !important;
     height: 20px;
     width: 20px;
     border-radius: 50%;
@@ -88,4 +88,62 @@
 
 .nav_icon:hover span{
     background: #17d74a !important;
+}
+
+/* user_profile */
+.user_profile{
+    position: relative;
+}
+
+.user_profile ul{
+    position: absolute;
+    background: #ebebeb;
+    margin: 0;
+    padding: 15px;
+    width: 160px;
+    top: 60px;
+    right: -70px;
+    z-index: 99;
+}
+.user_profile .btn_regular{
+    padding: 5px 20px !important;
+}
+
+.user_profile ul li{
+    list-style: none;
+}
+.user_profile .nav-link{
+    padding: 5px 20px !important;
+}
+
+#user_box #collasible-nav-dropdown {
+    font-size: 25px !important;
+    margin-right: 0 !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    padding-top: 0px;
+    padding-left: 5px;
+}
+
+#user_box .dropdown-toggle::after{
+    display: none;
+}
+
+#user_box .dropdown-item:hover {
+    background: transparent !important;
+    color: #000;
+    padding-left: 0;
+}
+
+#user_box .dropdown-menu[data-bs-popper]{
+    top: 59px;
+    left: -60px;
+    padding: 10px;
+    border-top: 5px solid var(--red);
+    
+}
+
+#user_box .dropdown-item{
+    text-align: center;
+    padding: 5px 0;
 }

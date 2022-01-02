@@ -1,11 +1,24 @@
+:root {
+    --red: #ff2e59;
+    --lght_pink: #fef5ef;
+    --orange: #ff7004;
+}
+
+/* anchor link style */
+.link_style {
+    margin: 0;
+    color: #04c5ff;
+    text-decoration: none;
+}
+
+/* regular button design */
 .btn_regular{
-    color: #000 !important;
+    color: var(--orange) !important;
     background: transparent !important;
-    border: 1px solid red !important;
+    border: 1px solid var(--orange) !important;
     position: relative;
     z-index: 22;
     overflow: hidden;
-    font-weight: 500 !important;
 }
 
 .btn_regular:hover{
@@ -21,12 +34,159 @@
     width: 100%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    background: #f79837;
+    transform: translate(-50%, -50%) scale(0) rotate(180deg);
+    background: var(--orange);
     z-index: -1;
     display: block;
     transition: all .3s ease-in-out;
 }
 .btn_regular:hover:after{
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1) rotate(0);
+}
+
+/* products_container */
+.products_container{
+    background-color: var(--lght_pink);
+    padding: 70px 0;
+}
+
+
+/* section_title */
+.section_title{
+    text-align: left;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.section_title h2{
+    text-align: left;
+    color: var(--red) !important;
+    position: relative;
+    display: inline-block;
+}
+
+.section_title h2:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100px;
+    background: var(--red);
+    bottom: -20px;
+    left: 0;
+}
+
+.section_title p{
+    position: absolute;
+    top: 45px;
+    left: 115px;
+    color: var(--orange);
+}
+
+/* product card design */
+.product_card{
+    border: 1px solid #e5e8ec;
+    box-shadow: none !important;
+    transition: all .3s ease-in-out !important;
+}
+.product_card:hover{
+    border: 1px solid var(--red ) !important;
+    box-shadow: 0 10px 40px 0px rgb(0 0 0 / 15%) !important;
+}
+
+.new_badge{
+    background-color: var(--orange);
+    position: absolute;
+    top: -15px;
+    left: 25px;
+    padding: 2px 20px;
+    color: #fff;
+    transition: all .3s ease-in-out !important;
+}
+
+.product_card:hover .new_badge{
+    border: 1px solid var(--red);
+}
+
+.product_card .card-title{
+    text-align: left;
+}
+
+
+.product_card .brand{
+    text-align: left !important;
+    display: block;
+    color: #ada6a6;
+}
+
+.content_box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* card image */
+.image_box{
+    padding: 30px 60px;
+}
+
+.product_img{
+    width: 100%;
+    transform: scale(1);
+    transition: all .3s ease-in-out;
+}
+
+.product_card:hover .product_img{
+    transform: scale(1.1);
+}
+
+.card-body{
+    padding-top: 0 !important;
+}
+
+.content_box .card-title{
+    text-align: left;
+}
+
+
+/* modal_box */
+.product_modal_box{
+    background-color: var(--orange);
+}
+
+.product_modal_box .link_style{
+    color: #fff;
+}
+
+.modal-body h5{
+    display: flex;
+    align-items: baseline;
+}
+
+.modal-body h5 p{
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.product_modal_box .btn_regular{
+    color: #000;
+    background-color: #fff !important;
+}
+
+.product_price{
+    font-size: 20px;
+}
+
+.quick_view{
+    color: #fff !important;
+    background-color: var(--orange) !important;
+    border: 1px solid var(--orange) !important;
+    padding: 10px 0 !important;
+    width: 100%;
+    transition: all .3s ease-in-out;
+}
+
+.quick_view:hover{
+    background-color: transparent !important;
+    color: var(--orange) !important;
 }
