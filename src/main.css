@@ -69,7 +69,7 @@
     content: "";
     position: absolute;
     height: 2px;
-    width: 40%;
+    width: 100px;
     background: var(--red);
     bottom: -20px;
     left: 0;
