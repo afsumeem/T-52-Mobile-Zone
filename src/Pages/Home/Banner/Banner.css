@@ -1,0 +1,14 @@
+.text-style {
+  color: rgb(243, 44, 77);
+}
+.buynow-btn {
+  background-color: rgb(243, 44, 77);
+  font-weight: 400;
+  border: none;
+}
+.buynow-btn:hover {
+  background-color: rgb(230, 153, 11);
+  font-weight: 400;
+  border: none;
+  color: rgb(0, 0, 0);
+}
