@@ -74,7 +74,7 @@ const Footer = () => {
 
                     <Col md={3} sm={6} xs={12}>
                         <h5 className='mb-4 footer-title'>SUBSCRIBE NEWSLETTER</h5>
-                        <div class="input-group mb-3 pt-5">
+                        <div class="input-group mb-3">
                             <input type="text" className="form-control footer-input" placeholder="Enter Email Address" aria-label="Recipient's username" aria-describedby="basic-addon2" />
 
 
@@ -105,9 +105,9 @@ const Footer = () => {
                     <hr />
                 </Row>
                 <div className='d-md-flex justify-content-between '>
-                    <p className='text-sm-center'>Copyright &copy;2021 All Rights Reserved </p>
+                    <p className='text-sm-center'>Copyright &copy;2022 All Rights Reserved </p>
 
-                    <p className='text-sm-center'>This Website is made with &#x003C;&#10083;&#x003E; by Team 52 </p>
+                    <p className='text-sm-center'>This Website is made with &#10083; by Team 52 </p>
                 </div>
             </Container >
         </div >
