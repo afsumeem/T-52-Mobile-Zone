@@ -4,6 +4,7 @@
     background: #fef5ef;
     position: relative;
     height: 200px;
+    border: 1px solid var(--red);
     overflow: hidden;
 }
 

@@ -14,6 +14,7 @@ function App() {
                 <Routes>
                     <Route exact path="/" element={<Home />} />
                     <Route path="/home" element={<Home />} />
+                    <Route path="/home/:productInfo" element={<Home />} />
                 </Routes>
                 <Footer></Footer>
             </Router>

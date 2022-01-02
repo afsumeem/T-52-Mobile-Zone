@@ -1,7 +1,11 @@
 [
   {
     "id": "1",
+<<<<<<< HEAD
     "picture": "https://i.ibb.co/3TGwRTg/iphone13-1.png",
+=======
+    "picture": "https://i.ibb.co/Lv4Nzsv/apple-1.png",
+>>>>>>> LatestProducts
     "name": "iPhone 13 Pro Max",
     "brand": "Apple",
     "condition": "New",
@@ -12,7 +16,11 @@
   },
   {
     "id": "2",
+<<<<<<< HEAD
     "picture": "https://i.ibb.co/6Zn4CgK/iphonepro-removebg-preview-1.png",
+=======
+    "picture": "https://i.ibb.co/drv8fjW/apple-2.png",
+>>>>>>> LatestProducts
     "name": "iPhone 13 Pro",
     "brand": "Apple",
     "condition": "New",
@@ -23,7 +31,11 @@
   },
   {
     "id": "3",
+<<<<<<< HEAD
     "picture": "https://i.ibb.co/Wgvx1Xh/samsung-1.png",
+=======
+    "picture": "https://i.ibb.co/QC33j8M/galaxy-2.png",
+>>>>>>> LatestProducts
     "name": "Samsung Galaxy A03",
     "brand": "Samsung",
     "condition": "New",
@@ -34,7 +46,11 @@
   },
   {
     "id": "4",
+<<<<<<< HEAD
     "picture": "https://i.ibb.co/TTh9mgz/12-500x500-removebg-preview-1.png",
+=======
+    "picture": "https://i.ibb.co/2jp0bz5/samsung-1.png",
+>>>>>>> LatestProducts
     "name": "Samsung Galaxy M52",
     "brand": "Samsung",
     "condition": "New",
@@ -45,7 +61,11 @@
   },
   {
     "id": "5",
+<<<<<<< HEAD
     "picture": "https://i.ibb.co/4mPhZHX/Huawei-P30-Pro-1.png",
+=======
+    "picture": "https://i.ibb.co/6cMb02G/Huawei-P30-Pro-1-removebg-preview.png",
+>>>>>>> LatestProducts
     "name": "Huawei P30 Pro",
     "brand": "Huawei",
     "condition": "New",
@@ -56,7 +76,11 @@
   },
   {
     "id": "6",
+<<<<<<< HEAD
     "picture": "https://i.ibb.co/583MLTW/huawei-1.png",
+=======
+    "picture": "https://i.ibb.co/jwBcCt5/Huawei20-pro.png",
+>>>>>>> LatestProducts
     "name": "Huawei Mate 20 Pro",
     "brand": "Huawei",
     "condition": "New",
@@ -67,7 +91,11 @@
   },
   {
     "id": "7",
+<<<<<<< HEAD
     "picture": "https://i.ibb.co/ZW1th2X/Oppo-A11s-main-1.png",
+=======
+    "picture": "https://i.ibb.co/58FZSy9/Oppo-A11.png",
+>>>>>>> LatestProducts
     "name": "Oppo A11s",
     "brand": "Oppo",
     "condition": "New",
@@ -78,7 +106,11 @@
   },
   {
     "id": "8",
+<<<<<<< HEAD
     "picture": "https://i.ibb.co/KXMTN1Z/Oppo-Find-N-1.png",
+=======
+    "picture": "https://i.ibb.co/59ppGrP/oppo-find-n.png",
+>>>>>>> LatestProducts
     "name": "Oppo Find N",
     "brand": "Oppo",
     "condition": "New",
@@ -89,7 +121,11 @@
   },
   {
     "id": "9",
+<<<<<<< HEAD
     "picture": "https://i.ibb.co/6YrJJTD/download-1.png",
+=======
+    "picture": "https://i.ibb.co/dWrWmj3/Vivo-Y32.png",
+>>>>>>> LatestProducts
     "name": "Vivo Y32",
     "brand": "Vivo",
     "condition": "New",
@@ -100,7 +136,11 @@
   },
   {
     "id": "10",
+<<<<<<< HEAD
     "picture": "https://i.ibb.co/QrNX2VL/Vivo-S12-1.png",
+=======
+    "picture": "https://i.ibb.co/3pct08Q/vivo-v23e.png",
+>>>>>>> LatestProducts
     "name": "Vivo S12",
     "brand": "Vivo",
     "condition": "New",
@@ -111,7 +151,11 @@
   },
   {
     "id": "11",
+<<<<<<< HEAD
     "picture": "https://i.ibb.co/ygDhwxp/redmi-note-11-1.png",
+=======
+    "picture": "https://i.ibb.co/0Gw0pgs/img.png",
+>>>>>>> LatestProducts
     "name": "Redmi Note11 pro",
     "brand": "Xiaomi",
     "condition": "New",
@@ -122,7 +166,11 @@
   },
   {
     "id": "12",
+<<<<<<< HEAD
     "picture": "https://i.ibb.co/Z2nxWrn/xiaomi-poco-m4-pro-5g-1-1.png",
+=======
+    "picture": "https://i.ibb.co/bmhMxvB/xiaomi-poco-m4.png",
+>>>>>>> LatestProducts
     "name": "Poco M4 Pro",
     "brand": "Xiaomi",
     "condition": "New",
@@ -133,7 +181,11 @@
   },
   {
     "id": "13",
+<<<<<<< HEAD
     "picture": "https://i.ibb.co/88mKGr4/Realme-Narzo-50i-1.png",
+=======
+    "picture": "https://i.ibb.co/3ckNFcS/Realme-Narzo-50i.png",
+>>>>>>> LatestProducts
     "name": "Realme Narzo 50i",
     "brand": "Realme",
     "condition": "New",
@@ -144,7 +196,11 @@
   },
   {
     "id": "14",
+<<<<<<< HEAD
     "picture": "https://i.ibb.co/4TPrhmM/realme-gt-neo-2-azul-01-l.png",
+=======
+    "picture": "https://i.ibb.co/h7jx1Hc/realme-gt-neo.png",
+>>>>>>> LatestProducts
     "name": "Realme GT Neo 2",
     "brand": "Realme",
     "condition": "New",
