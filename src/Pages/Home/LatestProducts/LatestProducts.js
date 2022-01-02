@@ -6,7 +6,7 @@ const LatestProducts = () => {
     const [products, setProducts] = useState([]);
     const [newProducts, setNewProducts] = useState([]);
     useEffect(() => {
-        fetch('./fakeData.json')
+        fetch('https://safe-coast-68587.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
