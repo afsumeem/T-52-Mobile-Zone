@@ -1,41 +1,41 @@
-.carousel-inner{
+.carousel-inner {
   padding: 40px 0 70px;
 }
-.carousel_content{
+.carousel_content {
   padding-left: 80px;
 }
 
-.carousel_content h1{
+.carousel_content h1 {
   font-size: 3.5rem;
   color: #fff;
 }
 
-.carousel_content h2{
+.carousel_content h2 {
   color: #fff;
   margin: 0;
 }
 
-.carousel_content p{
+.carousel_content p {
   font-size: 1.5rem;
 }
 
-.carousel_bottom{
+.carousel_bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.carousel_bottom .product_price{
+.carousel_bottom .product_price {
   font-size: 1.5rem;
 }
 
-.carousel_content .btn_regular{
+.carousel_content .btn_regular {
   color: #fff !important;
   border: 1px solid #fff !important;
   font-size: 1.3rem;
 }
 
-.carousel-indicators .active{
+.carousel-indicators .active {
   border: 2px solid var(--red) !important;
 }
 
