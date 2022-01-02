@@ -7,11 +7,11 @@ const FeaturedProduct = ({ product }) => {
   const { id, name, brand, price, picture, display, camera, battery } = product;
 
   const handleSaveProduct = productData => {
-    console.log(productData);
+
     axios.post('https://safe-coast-68587.herokuapp.com/saveProduct', productData)
       .then(res => {
         if (res.data.insertedId) {
-          alert('product added to cart successfully!');
+          alert('product added successfully!');
         }
 
       })

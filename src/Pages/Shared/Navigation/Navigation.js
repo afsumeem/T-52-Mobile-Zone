@@ -1,4 +1,4 @@
-import React, { useEffect, useReducer, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navigation.css";
 import { Badge, Button, Container, Form, FormControl, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -18,7 +18,6 @@ const Navigation = () => {
     const { user, logOut } = useFirebase();
 
     const [saveProducts, setSaveProducts] = useState([]);
-
 
     //fetch savedProduct API 
     useEffect(() => {

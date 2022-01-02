@@ -27,9 +27,13 @@ const useFirebase = () => {
         const user = result.user;
         const newUser = { email, displayName: name };
         setUser(newUser);
+
+        // save user to the database
+        saveUser(email, name, 'POST');
+
         navigate("/");
       })
-      .catch((error) => {})
+      .catch((error) => { })
 
       .finally(() => setIsLoading(false));
   };
@@ -42,7 +46,7 @@ const useFirebase = () => {
         const destination = location?.state?.from || "/home";
         navigate(destination);
       })
-      .catch((error) => {})
+      .catch((error) => { })
       .finally(() => setIsLoading(false));
   };
 
@@ -53,8 +57,11 @@ const useFirebase = () => {
         const user = result.user;
         const destination = location?.state?.from || "/home";
         navigate(destination);
+
+        // save user to the database
+        saveUser(user.email, user.displayName, 'PUT');
       })
-      .catch((error) => {})
+      .catch((error) => { })
       .finally(() => setIsLoading(false));
   };
 
@@ -82,6 +89,20 @@ const useFirebase = () => {
       })
       .finally(() => setIsLoading(false));
   };
+
+  //save user to database
+  const saveUser = (email, displayName, method) => {
+    const user = { email, displayName };
+    fetch('http://localhost:5000/users', {
+      method: method,
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(user)
+    })
+      .then()
+  }
+
 
   return {
     user,

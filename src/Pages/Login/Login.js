@@ -27,6 +27,8 @@ const Login = () => {
   const handleGoogleSignIn = () => {
     signInWithGoogle(location, navigate);
   };
+
+
   return (
     <div className="container  ">
       <div className="row ">
