@@ -13,54 +13,50 @@ const Footer = () => {
                 <Row className='pt-4 pb-2 gx-4 gy-3 m-0'>
                     <Col md={3} sm={6} xs={12}>
 
-                        <h5 className='mb-4 footer-title'>ADDRESS</h5>
+                        <h5 className='mb-4 footer-title'><span style={{ color: "#ff2e59" }}>T-52</span> Mobile Zone</h5>
 
                         {/* footer contents */}
-                        <div className='d-flex '>
-                            <FontAwesomeIcon icon={faMapMarkerAlt} className='mt-2 fs-4 footer-text' />
-
-                            <p className='ms-3'>205 Lake street, Mountain View,
+                        <div className='d-flex'>
+                            <FontAwesomeIcon className="footer_icon" icon={faMapMarkerAlt} />
+                            <p className='ms-2'>205 Lake street, Mountain View,
                                 <span className="fs-6">San Francisco, Callifornia</span>
                                 <br />
                                 USA
                             </p>
                         </div>
-                        <div className='d-flex '>
-                            <FontAwesomeIcon icon={faPhone} className='footer-text mt-1 fs-4' />
-
-                            <p className="fs-6 ms-3">+11 555 123-456 </p>
-                        </div>
-
                         <div className='d-flex'>
-                            <FontAwesomeIcon icon={faPaperPlane} className='footer-text mt-1 fs-4' />
-                            <p className=' ms-3'>support@hs.com </p>
+                            <FontAwesomeIcon className="footer_icon" icon={faPhone} />
+                            <p className='ms-2'>+11 555 123-456</p>
+                        </div>
+                        <div className='d-flex'>
+                            <FontAwesomeIcon className="footer_icon" icon={faPaperPlane} />
+                            <p className='ms-2'>support@mobilezone.com</p>
                         </div>
                     </Col>
 
+                    {/* LATEST NEWS */}
                     <Col md={3} sm={6} xs={12}>
                         <h5 className='mb-4 footer-title'>LATEST NEWS</h5>
-                        <div className='d-flex'>
+                        <div className='d-flex mb-3'>
                             <img src="https://i.ibb.co/6WkCYfF/img.jpg" className='footer-latest-news-img img-fluid' alt="" />
-
-                            <p className='ms-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit!
-                                <br />
-                                <span className='footer-text fw-bold'>Oct 11 2019 | Admin</span>
-                            </p>
+                            <div className='footer_text ms-3'>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                                <span>Oct 11 2019 | Admin</span>
+                            </div>
                         </div>
 
                         <div className='d-flex'>
                             <img src="https://i.ibb.co/w7FVt57/img2.jpg" className='footer-latest-news-img img-fluid' alt="" />
-
-                            <p className='ms-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit!
-                                <br />
-                                <span className='footer-text fw-bold'>Oct 11 2019 | Admin</span>
-                            </p>
-
+                            <div className='footer_text ms-3'>
+                                <p>Lorem ipsum dolor sit amet consectetur</p>
+                                <span>Oct 11 2019 | Admin</span>
+                            </div>
                         </div>
                     </Col>
 
+                    {/* QUICK LINKS */}
                     <Col md={3} sm={6} xs={12}>
-                        <div className='ms-md-5'>
+                        <div className='quick_link ms-md-5'>
                             <h5 className='mb-4 footer-title'>QUICK LINKS</h5>
 
                             <Nav.Link as={Link} to="/home" className='text-dark text-decoration-none'>Home</Nav.Link>
@@ -72,44 +68,41 @@ const Footer = () => {
                         </div>
                     </Col>
 
+                    {/* SUBSCRIBE NEWSLETTER */}
                     <Col md={3} sm={6} xs={12}>
                         <h5 className='mb-4 footer-title'>SUBSCRIBE NEWSLETTER</h5>
-                        <div class="input-group mb-3 pt-5">
-                            <input type="text" className="form-control footer-input" placeholder="Enter Email Address" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                        <div className='subscrib_box'>
+                            <div class="input-group mb-3">
+                                <input type="text" className="form-control footer-input" placeholder="Enter Email Address" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                                <Button className='input-background border-0'>
+                                    <FontAwesomeIcon icon={faPaperPlane} className=' mt-1' />
+                                </Button>
+                            </div>
+                            <div className='mt-3'>
+                                <h3>Follow Us</h3>
+                            </div>
+                            <div className="social_icon_box">
+                                <a className='social_icon' href="https://twitter.com/?lang=en"><FontAwesomeIcon className='footer-text' icon={faTwitter} /></a>
+                                <a className='social_icon' href="https://www.facebook.com/"><FontAwesomeIcon className='footer-text' icon={faFacebook} /></a>
 
+                                <a className='social_icon' href="https://www.instagram.com/"> <FontAwesomeIcon className='footer-text' icon={faInstagram} /></a>
 
-                            <Button className='input-background border-0'>
-                                <FontAwesomeIcon icon={faPaperPlane} className=' mt-1' />
-                            </Button>
+                                <a className='social_icon' href="https://www.skype.com/en/"><FontAwesomeIcon className='footer-text' icon={faSkype} /></a>
+
+                                <a className='social_icon' href="https://discord.com/"> <FontAwesomeIcon className='footer-text' icon={faDiscord} /></a>
+                            </div>
                         </div>
-                        <Button variant="none rounded-circle m-2" className='social-icon' size="sm">
-                            <a href="https://twitter.com/?lang=en"><FontAwesomeIcon className='footer-text' icon={faTwitter} /></a>
-                        </Button>
-
-                        <Button variant="none rounded-circle m-2" className='social-icon' size="sm">
-                            <a href="https://www.facebook.com/"><FontAwesomeIcon className='footer-text' icon={faFacebook} /></a>
-                        </Button>
-
-                        <Button variant="none rounded-circle m-2" className='social-icon' size="sm">
-                            <a href="https://www.instagram.com/"> <FontAwesomeIcon className='footer-text' icon={faInstagram} /></a>
-                        </Button>
-
-                        <Button variant="none rounded-circle m-2" className='social-icon' size="sm">
-                            <a href="https://www.skype.com/en/"><FontAwesomeIcon className='footer-text' icon={faSkype} /></a>
-                        </Button>
-
-                        <Button variant="none rounded-circle m-2" className='social-icon' size="sm">
-                            <a href="https://discord.com/"> <FontAwesomeIcon className='footer-text' icon={faDiscord} /></a>
-                        </Button>
                     </Col>
-                    <hr />
                 </Row>
-                <div className='d-md-flex justify-content-between '>
-                    <p className='text-sm-center'>Copyright &copy;2021 All Rights Reserved </p>
-
-                    <p className='text-sm-center'>This Website is made with &#x003C;&#10083;&#x003E; by Team 52 </p>
-                </div>
             </Container >
+            <div className="copyright_box">
+                <Container>
+                    <div className='d-md-flex justify-content-between '>
+                        <p className='text-sm-center'>Copyright &copy;2021 All Rights Reserved </p>
+                        <p className='text-sm-center'>This Website is made with &#x003C;&#10083;&#x003E; by Team 52 </p>
+                    </div>
+                </Container>
+            </div>
         </div >
     );
 };

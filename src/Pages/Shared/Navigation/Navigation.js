@@ -6,11 +6,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import useFirebase from "../../Hooks/useFirebase";
 
 const shoppingCart = <FontAwesomeIcon icon={faShoppingCart} />;
 const hardIcon = <FontAwesomeIcon icon={faHeart} />;
 const userIcon = <FontAwesomeIcon icon={faUserCircle} />;
+const faBarsIcon = <FontAwesomeIcon icon={faBars} />;
 
 const Navigation = () => {
     const { user, logOut } = useFirebase();
