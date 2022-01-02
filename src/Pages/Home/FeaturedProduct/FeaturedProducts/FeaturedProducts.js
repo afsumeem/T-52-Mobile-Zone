@@ -10,6 +10,8 @@ const FeaturedProducts = () => {
             .then(data => setProducts(data))
     }, [])
 
+    console.log(products)
+
     return (
         <div className="products_container">
             <Container>

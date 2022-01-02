@@ -23,7 +23,7 @@
 #collasible-nav-dropdown{
     padding-left: 0;
     color: #000;
-    margin-right: 60px;
+    margin-right: 90px;
     font-weight: 600;
 }
 
@@ -88,4 +88,62 @@
 
 .nav_icon:hover span{
     background: #17d74a !important;
+}
+
+/* user_profile */
+.user_profile{
+    position: relative;
+}
+
+.user_profile ul{
+    position: absolute;
+    background: #ebebeb;
+    margin: 0;
+    padding: 15px;
+    width: 160px;
+    top: 60px;
+    right: -70px;
+    z-index: 99;
+}
+.user_profile .btn_regular{
+    padding: 5px 20px !important;
+}
+
+.user_profile ul li{
+    list-style: none;
+}
+.user_profile .nav-link{
+    padding: 5px 20px !important;
+}
+
+#user_box #collasible-nav-dropdown {
+    font-size: 25px !important;
+    margin-right: 0 !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    padding-top: 0px;
+    padding-left: 5px;
+}
+
+#user_box .dropdown-toggle::after{
+    display: none;
+}
+
+#user_box .dropdown-item:hover {
+    background: transparent !important;
+    color: #000;
+    padding-left: 0;
+}
+
+#user_box .dropdown-menu[data-bs-popper]{
+    top: 59px;
+    left: -60px;
+    padding: 10px;
+    border-top: 5px solid var(--red);
+    
+}
+
+#user_box .dropdown-item{
+    text-align: center;
+    padding: 5px 0;
 }

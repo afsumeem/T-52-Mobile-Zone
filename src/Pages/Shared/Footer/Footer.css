@@ -2,44 +2,115 @@
     background: linear-gradient(90deg, rgba(255,200,163,1) 0%, rgba(247,232,222,1) 63%);
 }
 
-.footer-text{
-    color:#f79837
+.footer_text p{
+    margin-bottom: 4px;
+}
+
+.footer_text span{
+    color: var(--red);
+    font-size: 14px;
+}
+
+.quick_link .nav-link{
+    padding: 3px 5px !important;
+}
+
+.footer_icon{
+    font-size: 20px;
+    position: relative;
+    top: 3px;
+    color: var(--red);
+}
+
+.subscrib_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .footer-latest-news-img{
     border-radius: 10%;
-height: 80px;
-width: 80px;
+    height: 80px;
+    width: 80px;
 }
 
 .input-background{
-    background-color: #f79837;
+    background-color: var(--red);
 }
 
 .input-background:hover{
-     background-color: #fea144;
+    background-color: var(--red);
 }
 
 .footer-input{
-    border: 3px solid #f79837;
+    border: 3px solid var(--red);
 }
 .footer-input:hover{
-    border: 3px solid #b55c02;
+    border: 3px solid var(--red);
 }
 .social-icon{
-    border: 1px solid #f79837;
+    border: 1px solid var(--red);
 }
+
 .footer-title{
 position: relative;
 }
 
 .footer-title:after{
     content: "";
-        
-        width: 40px;
-        height: 2px;
-        background: #f79837;
-        left: 0;
-        top: 100%;
-        position: absolute;
+    width: 40%;
+    height: 3px;
+    background: var(--red);
+    left: 0;
+    top: 28px;
+    position: absolute;
+}
+
+.social_icon_box{
+    display: flex;
+}
+
+.social_icon{
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 3px;
+    border: 1px solid var(--red);
+    color: #000;
+    position: relative;
+    overflow: hidden;
+    z-index: 99;
+    transition: all .3s ease-in-out;
+}
+.social_icon:hover{
+    color: #fff;
+}
+.social_icon::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: -1;
+    display: block;
+    transition: all .3s ease-in-out;
+    background: var(--red);
+}
+
+.social_icon:hover:after{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.copyright_box{
+    background-color: rgb(235, 235, 235);
+    padding-top: 15px;
+    box-shadow: rgb(255 0 0 / 83%) 0px 13px 40px 0px;
+    margin-top: 40px;
 }

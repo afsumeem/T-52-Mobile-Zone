@@ -1,0 +1,23 @@
+.special_product_container{
+    background-image: url(https://i.ibb.co/N6GCLrZ/banner-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 80px 0;
+}
+
+.special_text{
+    text-align: left;
+    color: #fff;
+}
+
+.special_text h2{
+    color: #ffe579;
+}
+
+.special_text .btn_regular{
+    border: 1px solid #fff !important;
+    color: #fff !important;
+    margin-left: 40px;
+    margin-top: -5px;
+}
