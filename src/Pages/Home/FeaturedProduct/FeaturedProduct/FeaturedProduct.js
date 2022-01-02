@@ -1,9 +1,21 @@
+import axios from "axios";
 import React from "react";
 import { Button, Card, Modal } from "react-bootstrap";
 import { Link, Link as NavLink } from "react-router-dom";
 
 const FeaturedProduct = ({ product }) => {
   const { id, name, brand, price, picture, display, camera, battery } = product;
+
+  const handleSaveProduct = productData => {
+    console.log(productData);
+    axios.post('https://safe-coast-68587.herokuapp.com/saveProduct', productData)
+      .then(res => {
+        if (res.data.insertedId) {
+          alert('product added to cart successfully!');
+        }
+
+      })
+  }
 
   const url = `/home/${id}`;
   function MyVerticallyCenteredModal(props) {
@@ -63,7 +75,7 @@ const FeaturedProduct = ({ product }) => {
           </Card.Title>
           <div className="content_box mt-3">
             <span className="product_price">${price}</span>
-            <Button className="btn_regular" variant="primary">
+            <Button onClick={() => handleSaveProduct(product)} className="btn_regular" variant="primary">
               Add To Cart
             </Button>
           </div>

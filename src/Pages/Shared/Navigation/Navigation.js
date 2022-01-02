@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import "./Navigation.css";
 import { Badge, Button, Container, Form, FormControl, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -16,6 +16,18 @@ const faBarsIcon = <FontAwesomeIcon icon={faBars} />;
 
 const Navigation = () => {
     const { user, logOut } = useFirebase();
+
+    const [saveProducts, setSaveProducts] = useState([]);
+
+
+    //fetch savedProduct API 
+    useEffect(() => {
+        fetch('https://safe-coast-68587.herokuapp.com/saveProduct')
+            .then(res => res.json())
+            .then(data => setSaveProducts(data));
+    }, [])
+
+
     return (
         <div>
             {/* top navbar */}
@@ -104,7 +116,7 @@ const Navigation = () => {
                             <Nav.Link className="total_price">USD: $00.00</Nav.Link>
                             <Nav.Link className="nav_icon" href="#deets">
                                 {shoppingCart}
-                                <Badge>0</Badge>
+                                <Badge>{saveProducts.length}</Badge>
                             </Nav.Link>
                             <Nav.Link className="nav_icon" href="#deets">
                                 {hardIcon}
