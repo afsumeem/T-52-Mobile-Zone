@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React from "react";
-=======
-import React, { useEffect, useState } from "react";
->>>>>>> bb0b9c1f5503ea0d5e64529a1c62a464c01f4fff
 import "./Navigation.css";
 import { Badge, Button, Container, Form, FormControl, Nav, Navbar, NavDropdown, } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -18,19 +14,6 @@ const userIcon = <FontAwesomeIcon icon={faUserCircle} />;
 const Navigation = () => {
     const { user, logOut } = useFirebase();
 
-<<<<<<< HEAD
-=======
-    const [saveProducts, setSaveProducts] = useState([]);
-
-    //fetch savedProduct API 
-    useEffect(() => {
-        fetch('https://safe-coast-68587.herokuapp.com/saveProduct')
-            .then(res => res.json())
-            .then(data => setSaveProducts(data));
-    }, [])
-
-
->>>>>>> bb0b9c1f5503ea0d5e64529a1c62a464c01f4fff
     return (
         <div>
 
