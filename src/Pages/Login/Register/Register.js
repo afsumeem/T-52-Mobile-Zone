@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Col, Row } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useFirebase from "../../Hooks/useFirebase";
 
@@ -31,48 +31,53 @@ const Register = () => {
     signInWithGoogle(location, navigate);
   };
 
-
   return (
-    <div className="container  ">
-      <div className="row">
-        <div className="col-lg-6 ">
+    <div className="container  my-5">
+      <Row>
+        <Col md={6} className="col-lg-6 ">
           <img className="w-100" src="https://image.freepik.com/free-vector/sign-concept-illustration_114360-5425.jpg" alt="" />
-        </div>
-        <div style={{ marginTop: "60px" }} className="col-lg-6">
-          <form onSubmit={handleRegisterSubmit}>
-            <h3 className="py-4 text-style">Please Register</h3>
-            <label htmlFor="exampleInputPassword1"></label>
-            <input onChange={handleOnChange} className="w-75 mb-3" type="name" name="name" id="" placeholder="your name" required />
-            <label htmlFor="exampleInputEmail1"></label>
-            <input onChange={handleOnChange} className="w-75  mb-3" type="email" name="email" id="" placeholder="email" required />
-            <br />
-            <label htmlFor="exampleInputPassword1"></label>
-            <input onChange={handleOnChange} className="w-75 mb-3" type="password" name="password" id="" placeholder="password" required />
-            <label htmlFor="exampleInputPassword1"></label>
-            <input
-              onChange={handleOnChange}
-              className="w-75 mb-3"
-              type="password"
-              name="password2"
-              id=""
-              placeholder="re type password"
-              required
-            />
-            <br />
-            <Button type="submit" className="w-75  buynow-btn mb-3">
-              Register
-            </Button>
-            <br />
-            <Link to="/login">
-              <Button variant="text">Already Register? Please Login</Button>
-            </Link>
-            <br />
-            <Button onClick={handleGoogleSignIn} className="w-75  buynow-btn mb-3">
-              Google Sign In
-            </Button>
-          </form>
-        </div>
-      </div>
+        </Col>
+        <Col md={6}>
+          <div className="login_form">
+            <div className="login_title mb-4">
+              <h3>Register</h3>
+            </div>
+            <form onSubmit={handleRegisterSubmit}>
+              <label htmlFor="name">Full Name <span>*</span></label>
+              <input onChange={handleOnChange} type="name" name="name" id="name" placeholder="Enter your full Name" required />
+
+              <label htmlFor="email">Email Address <span>*</span></label>
+              <input onChange={handleOnChange} type="email" name="email" id="email" placeholder="Enter your email" required />
+
+              <label htmlFor="password">Password <span>*</span></label>
+              <input onChange={handleOnChange} type="password" name="password" id="password" placeholder="Enter your password" required />
+
+              <label htmlFor="re_pass">Confirm Password <span>*</span></label>
+              <input
+                onChange={handleOnChange}
+                type="password"
+                name="password2"
+                id="re_pass"
+                placeholder="Re enter your password"
+                required
+              />
+
+              <div className="d-flex align-items-center justify-content-between">
+                <Button type="submit" className="btn_regular">
+                  Register
+                </Button>
+                <Link to="/login">
+                  <Button className="btn_regular" variant="text">Login</Button>
+                </Link>
+              </div>
+
+              <Button onClick={handleGoogleSignIn} className="btn_regular w-100 mt-4">
+                Sign In With Google
+              </Button>
+            </form>
+          </div>
+        </Col>
+      </Row>
     </div>
   );
 };
