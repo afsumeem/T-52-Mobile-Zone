@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import useFirebase from "../../Hooks/useFirebase";
 import AddToCart from "../AddToCart/AddToCart";
 
 const hardIcon = <FontAwesomeIcon icon={faHeart} />;
 const userIcon = <FontAwesomeIcon icon={faUserCircle} />;
+const barsIcon = <FontAwesomeIcon icon={faBars} />;
 
 const Navigation = () => {
   const { user, logOut } = useFirebase();
@@ -57,10 +59,10 @@ const Navigation = () => {
       <Navbar
         collapseOnSelect
         expand="lg"
-        style={{ background: "#fef5ef", padding: "20px 0", boxShadow: "0 10px 40px 0px rgb(0 0 0 / 15%)" }}
+        style={{ background: "#fef5ef", padding: "20px 0 0", boxShadow: "0 10px 40px 0px rgb(0 0 0 / 15%)" }}
       >
         <Container>
-          <NavDropdown title="All-Brands" id="collasible-nav-dropdown">
+          <NavDropdown title={barsIcon} id="collasible-nav-dropdown">
             <NavDropdown.Item as={Link} to="/brands-product/Apple">
               Apple
             </NavDropdown.Item>
@@ -102,7 +104,7 @@ const Navigation = () => {
                 About
               </Nav.Link>
             </Nav>
-            <Nav>
+            <Nav style={{ marginBottom: '11px' }}>
               <Nav.Link className="total_price">USD: $00.00</Nav.Link>
               <AddToCart></AddToCart>
               <Nav.Link className="nav_icon" href="#deets">
@@ -112,7 +114,7 @@ const Navigation = () => {
 
               {/* user */}
               <div id="user_box">
-                <NavDropdown title={userIcon} id="collasible-nav-dropdown">
+                <NavDropdown style={{ marginLeft: '1rem' }} title={userIcon} id="collasible-nav-dropdown">
                   <NavDropdown.Item>{user.displayName}</NavDropdown.Item>
                   <NavDropdown.Item as={Link} to="/account">
                     My Account
