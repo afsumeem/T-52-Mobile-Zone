@@ -10,6 +10,7 @@ import Register from "./Pages/Login/Register";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import DetailsProduct from "./Pages/DetailsProduct/DetailsProduct";
 import Carts from "./Pages/Carts/Carts/Carts";
+import Blogs from "./Pages/Blogs/Blogs/Blogs";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/detailsProduct" element={<DetailsProduct />} />
             <Route path="/cart" element={<Carts />} />
+            <Route path="/blog" element={<Blogs />} />
           </Routes>
           <Footer></Footer>
         </Router>
