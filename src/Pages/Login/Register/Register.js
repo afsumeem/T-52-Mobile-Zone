@@ -24,9 +24,9 @@ const Register = () => {
       alert("your password did not match");
     }
     registerUser(loginData.email, loginData.password, loginData.name, location, navigate);
-
     e.preventDefault();
   };
+
   const handleGoogleSignIn = () => {
     signInWithGoogle(location, navigate);
   };

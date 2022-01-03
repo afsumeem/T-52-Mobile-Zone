@@ -31,9 +31,10 @@ function App() {
             <Route path="/cart" element={<Carts />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/blog" element={<Blogs />} />
-            <Route path="/addBlog" element={<AddNewBlog />} />
-            <Route path="/brands-product/:brand" element={<BrandProducts />} />
 
+            <Route path="/addBlog" element={<AddNewBlog />} />
+
+            <Route path="/brands-product/:brand" element={<BrandProducts />} />
           </Routes>
           <Footer></Footer>
         </Router>

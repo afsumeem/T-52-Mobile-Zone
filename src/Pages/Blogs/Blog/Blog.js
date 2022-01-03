@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Card } from "react-bootstrap";
 
 const Blog = ({ blog }) => {
-    const { img, description, name } = blog;
+    const { img, description, name, date, author } = blog;
     return (
         <div className="col-lg-6 mb-2">
             <Card className="product_card">
@@ -17,7 +17,9 @@ const Blog = ({ blog }) => {
                     </div>
                     <div>
                         <div className="d-flex justify-content-between align-items-center">
-                            <span style={{ color: "gray" }}>Date: 03/01/2022</span>
+                            <span style={{ color: "gray" }}>{date}<br />
+                                {author}
+                            </span>
                             <Button className="btn_regular text-end" variant="primary">
                                 Read More
                             </Button>
