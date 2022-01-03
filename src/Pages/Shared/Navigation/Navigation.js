@@ -16,7 +16,6 @@ const Navigation = () => {
 
     return (
         <div>
-
             {/* top navbar */}
             <Navbar collapseOnSelect expand="lg" style={{ background: "#ebebeb" }}>
                 <Container>
@@ -40,13 +39,13 @@ const Navigation = () => {
                             </Form>
                         </Nav>
                         <Nav>
-                            <Nav.Link eventKey={2} href="#memes">
+                            <Nav.Link as={Link} eventKey={2} to="/account">
                                 My Account
                             </Nav.Link>
-                            <Nav.Link eventKey={2} href="#memes">
+                            <Nav.Link as={Link} eventKey={2} to="/cart">
                                 Cart
                             </Nav.Link>
-                            <Nav.Link eventKey={2} href="#memes">
+                            <Nav.Link as={Link} eventKey={2} to="/checkout">
                                 Checkout
                             </Nav.Link>
                         </Nav>
