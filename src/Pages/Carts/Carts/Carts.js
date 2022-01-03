@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Col, Container, Row, Table } from 'react-bootstrap';
+import { Button, Col, Container, Nav, Row, Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Cart from '../Cart/Cart';
 import './Carts.css'
 
@@ -15,6 +16,10 @@ const Carts = () => {
     return (
         <div className='cart_container'>
             <Container>
+                <div className="section_title">
+                    <h2>Cart ...</h2>
+                    <p> Check your cart products</p>
+                </div>
                 <Row>
                     <Col xs md={8}>
                         <div className="cart_info">
@@ -59,7 +64,9 @@ const Carts = () => {
                                 <span>$00.00</span>
                             </div>
                         </div>
-                        <Button className="btn_regular">Checkout to Proced</Button>
+                        <Nav.Link as={Link} to="/checkout">
+                            <Button className="btn_regular">Checkout to Proced</Button>
+                        </Nav.Link>
                     </Col>
                 </Row>
             </Container>
