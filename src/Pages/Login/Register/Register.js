@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import useFirebase from "../Hooks/useFirebase";
+import useFirebase from "../../Hooks/useFirebase";
 
 const Register = () => {
   const [loginData, setLoginData] = useState({});

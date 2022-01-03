@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import useAuth from "../Hooks/useAuth";
+import useAuth from "../../Hooks/useAuth";
 
 const Login = () => {
   const [loginData, setLoginData] = useState({});

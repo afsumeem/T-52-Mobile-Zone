@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 import useAuth from '../Hooks/useAuth';
-import './checkout.css'
+import './Checkout.css'
 
 const Checkout = () => {
 
@@ -24,7 +24,7 @@ const Checkout = () => {
 
     // handle submit
     const onSubmit = data => {
-
+        console.log(data)
         axios.post('http://localhost:5000/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
@@ -34,39 +34,58 @@ const Checkout = () => {
             })
     };
 
-
     return (
-        <div style={{ 'backgroundColor': '#fef5ef' }}>
+        <div className="my-5 pt-4">
             <Container>
+                <div className="section_title">
+                    <h2>CheckOut ...</h2>
+                    <p> Enter your billing address</p>
+                </div>
                 <Row>
-                    <div className='section_title pt-3'>
-                        <h2>Checkout</h2>
-                    </div>
-
                     <Col md={8}>
+                        <div className="checkout_form">
+                            <div className="checkout_form_title mb-4">
+                                <h2>Billing Address</h2>
+                            </div>
+                            <form onSubmit={handleSubmit(onSubmit)} className='m-auto'>
+                                <label htmlFor="name">Full Name <span>*</span></label>
+                                <input id="name" defaultValue={user.displayName} {...register("name", { required: true })} />
 
-                        <form onSubmit={handleSubmit(onSubmit)} className='m-auto'>
+                                <label htmlFor="email">Email <span>*</span></label>
+                                <input id="email" defaultValue={user.email} {...register("email", { required: true })} />
 
-                            <input className='d-block my-3 w-75 m-auto p-1' defaultValue={user.displayName} {...register("name", { required: true })} />
+                                <label htmlFor="country">Country <span>*</span></label>
+                                <input id="country" placeholder="Country"{...register("Country", { required: true })} />
 
-                            <input className='d-block my-3 w-75 m-auto p-1' defaultValue={user.email} {...register("email", { required: true })} />
+                                <Row className="group_input">
+                                    <Col md={6}>
+                                        <label htmlFor="city">City <span>*</span></label>
+                                        <input id="city" placeholder="City"{...register("city", { required: true })} />
+                                    </Col>
 
-                            <input className='d-block my-3 w-75 m-auto p-1' placeholder="Country"{...register("Country", { required: true })} />
+                                    <Col md={6} className="col-md-6">
+                                        <label htmlFor="zipcode">Zip Code <span>*</span></label>
+                                        <input id="zipcode" placeholder="Zip Code"{...register("post", { required: true })} />
+                                    </Col>
+                                </Row>
 
-                            <input className='d-block my-3 w-75 m-auto p-1' placeholder="City"{...register("city", { required: true })} />
+                                <Row className="group_input">
+                                    <Col md={6}>
+                                        <label htmlFor="region">Region / State <span>*</span></label>
+                                        <input placeholder="Region / State"{...register("region")} />
+                                    </Col>
 
-                            <input className='d-block my-3 w-75 m-auto p-1' placeholder="Post Code"{...register("post", { required: true })} />
+                                    <Col md={6}>
+                                        <label htmlFor="date">Choose Date <span>*</span></label>
+                                        <input type="date" placeholder="Choose Date"{...register("date", { required: true })} />
+                                    </Col>
+                                </Row>
 
-                            <input className='d-block my-3 w-75 m-auto p-1' placeholder="Region / State"{...register("region")} />
-
-                            <input className='d-block my-3 w-75 m-auto p-1' type="date" placeholder="Choose Date"{...register("date", { required: true })} />
-
-                            <Button type="submit" className='quick_view d-block my-3 w-75 m-auto p-1'>
-                                Place Order
-                            </Button>
-
-
-                        </form>
+                                <Button type="submit" className='btn_regular'>
+                                    Place an Order
+                                </Button>
+                            </form>
+                        </div>
                     </Col>
                     <Col md={4}>
 

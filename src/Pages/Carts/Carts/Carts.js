@@ -15,6 +15,10 @@ const Carts = () => {
     return (
         <div className='cart_container'>
             <Container>
+                <div className="section_title">
+                    <h2>Cart ...</h2>
+                    <p> Check your cart products</p>
+                </div>
                 <Row>
                     <Col xs md={8}>
                         <div className="cart_info">
