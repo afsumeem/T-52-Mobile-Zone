@@ -8,11 +8,13 @@ import SpecialProduct from "../SpecialProduct/SpecialProduct";
 const Home = () => {
     return (
         <div>
+
             <Banner></Banner>
             <BestNewItems></BestNewItems>
             <LatestProducts></LatestProducts>
             <SpecialProduct></SpecialProduct>
             <FeaturedProducts></FeaturedProducts>
+
         </div>
     );
 };
