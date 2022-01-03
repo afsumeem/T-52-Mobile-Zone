@@ -1,0 +1,44 @@
+[
+    {
+        "id":"1",
+      "name": "Iphone 13mini",
+      "description":
+        "The iPhone 13 and iPhone 13 Mini are smartphones designed, developed, marketed, and sold by Apple Inc. They are the fifteenth generation of iPhones . They were unveiled at an Apple Event in Apple Park in Cupertino, California on September 14, 2021",
+      "img": "https://i.ibb.co/WVKWp0X/bg1.jpg"
+    },
+    {
+        "id":"2",
+      "name": "Iphone 13pro",
+      "description":
+        "The iPhone 13 and iPhone 13 Mini are smartphones designed, developed, marketed, and sold by Apple Inc. They are the fifteenth generation of iPhones . They were unveiled at an Apple Event in Apple Park in Cupertino, California on September 14, 2021",
+      "img": "https://i.ibb.co/MM7RKtR/bg2.jpg"
+    },
+    {
+        "id":"3",
+      "name": "Samsung S21 ",
+      "description":
+        "The Galaxy S21 series has a design similar to its predecessor, with an Infinity-O display containing a circular cutout in the top center for the front selfie camera. The S21's back panel is reinforced poly-carbonate  while the S21+ and S21 Ultra use gorilla glass victus. ",
+      "img": "https://i.ibb.co/xHvPvdj/bg3.webp"
+    },
+    {
+        "id":"4",
+      "name": "Samsung S21",
+      "description":
+        "The Galaxy S21 series has a design similar to its predecessor, with an Infinity-O display containing a circular cutout in the top center for the front selfie camera. The S21's back panel is reinforced poly-carbonate  while the S21+ and S21 Ultra use gorilla glass victus. ",
+      "img": "https://i.ibb.co/xHvPvdj/bg3.webp"
+    },
+    {
+        "id":"5",
+      "name": "One Plus",
+      "description":
+        "OnePlus was founded on 16 December 2013 by former  Pete Lau and Carl Pei.[7] According to Chinese public records, OnePlus' only institutional shareholder is Electronics.[4] Lau denied that OnePlus was a wholly owned subsidiary of  Electronics and not Oppo Mobile",
+      "img": "https://i.ibb.co/ykKYXT0/bg5.webp"
+    },
+    {
+        "id":"6",
+      "name": "One Plus",
+      "description":
+        "OnePlus was founded on 16 December 2013 by former  Pete Lau and Carl Pei.[7] According to Chinese public records, OnePlus' only institutional shareholder is Electronics.[4] Lau denied that OnePlus was a wholly owned subsidiary of  Electronics and not Oppo Mobile",
+      "img": "https://i.ibb.co/Ch9jp4G/bg6.webp"
+    }
+  ]

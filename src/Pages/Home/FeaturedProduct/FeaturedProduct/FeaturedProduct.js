@@ -7,11 +7,11 @@ const FeaturedProduct = ({ product }) => {
   const { id, name, brand, price, picture, display, camera, battery } = product;
 
   const handleSaveProduct = productData => {
-    console.log(productData);
+
     axios.post('https://safe-coast-68587.herokuapp.com/saveProduct', productData)
       .then(res => {
         if (res.data.insertedId) {
-          alert('product added to cart successfully!');
+          alert('product added successfully!');
         }
 
       })
@@ -48,7 +48,7 @@ const FeaturedProduct = ({ product }) => {
 
               <Modal.Footer className="justify-content-between">
                 <span className="product_price">${price}</span>
-                <Button className="btn_regular" variant="primary">
+                <Button onClick={() => handleSaveProduct(product)} className="btn_regular" variant="primary">
                   Add To Cart
                 </Button>
               </Modal.Footer>

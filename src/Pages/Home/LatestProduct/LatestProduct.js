@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react';
 import { Button, Card, Modal } from 'react-bootstrap';
 import { Link as NavLink } from 'react-router-dom';
@@ -5,6 +6,16 @@ import { Link as NavLink } from 'react-router-dom';
 
 const LatestProduct = ({ product }) => {
     const { id, name, brand, price, picture, display, camera, battery } = product;
+
+    const handleSaveProduct = productData => {
+
+        axios.post('https://safe-coast-68587.herokuapp.com/saveProduct', productData)
+            .then(res => {
+                if (res.data.insertedId) {
+                    alert('product added successfully!');
+                }
+            })
+    }
 
     const url = `/home/${id}`;
     function MyVerticallyCenteredModal(props) {
@@ -35,7 +46,7 @@ const LatestProduct = ({ product }) => {
                                 <span className="product_price">
                                     ${price}
                                 </span>
-                                <Button className="btn_regular" variant="primary">Add To Cart</Button>
+                                <Button onClick={() => handleSaveProduct(product)} className="btn_regular" variant="primary">Add To Cart</Button>
                             </Modal.Footer>
                         </div>
                     </div>
@@ -59,7 +70,7 @@ const LatestProduct = ({ product }) => {
                         <span className="product_price">
                             ${price}
                         </span>
-                        <Button className="btn_regular" variant="primary">Add To Cart</Button>
+                        <Button onClick={() => handleSaveProduct(product)} className="btn_regular" variant="primary">Add To Cart</Button>
                     </div>
                     <Button className="quick_view mt-3" onClick={() => setModalShow(true)}>
                         Quick View
