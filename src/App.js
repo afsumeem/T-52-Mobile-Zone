@@ -14,6 +14,7 @@ import Checkout from "./Pages/Checkout/Checkout";
 import AddNewBlog from "./Pages/Dashboard/AddNewBlog/AddNewBlog";
 import Login from "./Pages/Login/Login/Login";
 import Register from "./Pages/Login/Register/Register";
+import About from "./Pages/About/About";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/home/:productInfo" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/about" element={<About />} />
             <Route path="/detailsProduct" element={<DetailsProduct />} />
             <Route path="/cart" element={<Carts />} />
             <Route path="/checkout" element={<Checkout />} />
