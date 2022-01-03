@@ -15,6 +15,7 @@ import AddNewBlog from "./Pages/Dashboard/AddNewBlog/AddNewBlog";
 import Login from "./Pages/Login/Login/Login";
 import Register from "./Pages/Login/Register/Register";
 import About from "./Pages/About/About";
+import AddNewProduct from "./Pages/Dashboard/AddNewProduct/AddNewProduct";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Route path="/blog" element={<Blogs />} />
 
             <Route path="/addBlog" element={<AddNewBlog />} />
+            <Route path="/addProduct" element={<AddNewProduct />} />
 
             <Route path="/brands-product/:brand" element={<BrandProducts />} />
           </Routes>
