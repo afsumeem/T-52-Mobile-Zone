@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import './AddToCart.css';
 import CartProduct from "../../CartProduct/CartProduct";
+import { Link } from "react-router-dom";
 
 const shoppingCart = <FontAwesomeIcon icon={faShoppingCart} />;
 
@@ -42,7 +43,7 @@ function OffCanvasExample({ name, ...props }) {
                 </Offcanvas.Body>
                 <div className="cart_footer">
                     <Button className="btn_regular">View Cart</Button>
-                    <Button className="btn_regular">Checkout</Button>
+                    <Button as={Link} to="/checkout" className="btn_regular">Checkout</Button>
                 </div>
             </Offcanvas>
         </>

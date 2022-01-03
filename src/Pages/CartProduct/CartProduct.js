@@ -14,7 +14,6 @@ const CartProduct = ({ product }) => {
     const handleNoBtn = () => setShow(false);
 
     // handle delete product from add to cart
-
     const handleDeleteOrder = id => {
         const url = `https://safe-coast-68587.herokuapp.com/saveProduct/${id}`
 
@@ -53,10 +52,10 @@ const CartProduct = ({ product }) => {
 
                 <Modal.Footer>
 
-                    <Button variant="secondary" onClick={() => { handleDeleteOrder(_id) }}>
+                    <Button variant="outline-danger" className="confirmation-button" onClick={() => { handleDeleteOrder(_id) }}>
                         Yes! Delete it
                     </Button>
-                    <Button variant="primary" onClick={handleNoBtn}>
+                    <Button variant="outline-success" onClick={handleNoBtn}>
                         No
                     </Button>
                 </Modal.Footer>
