@@ -3153,6 +3153,7 @@
   "version" "1.0.0"
 
 "bootstrap-star-rating@git://github.com/kartik-v/bootstrap-star-rating.git#v3.5.5":
+  "integrity" "sha512-tadiu8VdO+Y/Btea0BdaSnruuuHcy4Q2x5wBSHm1EXrvCJVMOGcm6PWgy+kEemVQVIfaSTfAx0clBbTj3jEAxQ=="
   "resolved" "git+ssh://git@github.com/kartik-v/bootstrap-star-rating.git#0f729ea50a69224b643e2d9c955b9183e387f03a"
   "version" "3.5.5"
   dependencies:

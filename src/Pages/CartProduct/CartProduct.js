@@ -44,15 +44,12 @@ const CartProduct = ({ product }) => {
 
             {/* Confirmation alert */}
             < Modal show={show} onHide={handleClose} >
-
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Confirmation</h5>
                 </div>
                 <Modal.Body>Are you sure you want to delete this product from add to cart?</Modal.Body>
-
                 <Modal.Footer>
-
-                    <Button variant="outline-danger" className="confirmation-button" onClick={() => { handleDeleteOrder(_id) }}>
+                    <Button variant="secondary" onClick={() => { handleDeleteOrder(_id) }}>
                         Yes! Delete it
                     </Button>
                     <Button variant="outline-success" onClick={handleNoBtn}>
