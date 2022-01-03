@@ -31,7 +31,6 @@ const Blogs = () => {
                                 <div className="col-lg-7 text-start  mt-4">
                                     <h4 className=" ">{bloge.name}</h4>
                                     <p className=""> {bloge.date}</p>
-                                    <h5 className="text-info"></h5>
                                 </div>
                             </div>
                         </div>

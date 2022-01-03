@@ -34,7 +34,7 @@ const AddNewBlog = () => {
 
                 <input className='d-block my-3 w-75 m-auto p-1' placeholder="Blog Details" {...register("description", { required: true })} />
 
-                <input className='d-block my-3 w-75 m-auto p-1' defaultValue={user.displayName} {...register("author", { required: true })} />
+                <input className='d-block my-3 w-75 m-auto p-1' defaultValue={"by admin"} {...register("author", { required: true })} />
 
                 <input className='d-block my-3 w-75 m-auto p-1' defaultValue={new Date().toISOString().substring(0, 10)} {...register("date", { required: true })} />
 
