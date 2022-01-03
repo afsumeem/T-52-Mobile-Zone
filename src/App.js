@@ -14,6 +14,7 @@ import Checkout from "./Pages/Checkout/Checkout";
 import AddNewBlog from "./Pages/Dashboard/AddNewBlog/AddNewBlog";
 import Login from "./Pages/Login/Login/Login";
 import Register from "./Pages/Login/Register/Register";
+import MyAccount from "./Pages/MyAccount/MyAccount";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Route path="/addBlog" element={<AddNewBlog />} />
 
             <Route path="/brands-product/:brand" element={<BrandProducts />} />
+            <Route path="/account" element={<MyAccount />} />
           </Routes>
           <Footer></Footer>
         </Router>

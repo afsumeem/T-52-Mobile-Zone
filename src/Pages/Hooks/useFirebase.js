@@ -27,13 +27,11 @@ const useFirebase = () => {
         const user = result.user;
         const newUser = { email, displayName: name };
         setUser(newUser);
-
+        navigate("/home");
         // save user to the database
-        saveUser(email, name, 'POST');
-
-        navigate("/");
+        saveUser(email, name, "POST");
       })
-      .catch((error) => { })
+      .catch((error) => {})
 
       .finally(() => setIsLoading(false));
   };
@@ -46,7 +44,7 @@ const useFirebase = () => {
         const destination = location?.state?.from || "/home";
         navigate(destination);
       })
-      .catch((error) => { })
+      .catch((error) => {})
       .finally(() => setIsLoading(false));
   };
 
@@ -59,9 +57,9 @@ const useFirebase = () => {
         navigate(destination);
 
         // save user to the database
-        saveUser(user.email, user.displayName, 'PUT');
+        saveUser(user.email, user.displayName, "PUT");
       })
-      .catch((error) => { })
+      .catch((error) => {})
       .finally(() => setIsLoading(false));
   };
 
@@ -93,16 +91,14 @@ const useFirebase = () => {
   //save user to database
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch('https://safe-coast-68587.herokuapp.com/users', {
+    fetch("https://safe-coast-68587.herokuapp.com/users", {
       method: method,
       headers: {
-        'content-type': 'application/json'
+        "content-type": "application/json",
       },
-      body: JSON.stringify(user)
-    })
-      .then()
-  }
-
+      body: JSON.stringify(user),
+    }).then();
+  };
 
   return {
     user,
