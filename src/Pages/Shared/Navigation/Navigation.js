@@ -21,7 +21,7 @@ const Navigation = () => {
       {/* top navbar */}
       <Navbar collapseOnSelect expand="lg" style={{ background: "#ebebeb" }}>
         <Container>
-          <Navbar.Brand className="fw-bold" href="#home">
+          <Navbar.Brand as={Link} className="fw-bold" to="/home">
             <span style={{ color: "red" }}>T-52</span> Mobile Zone
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
