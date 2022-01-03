@@ -61,25 +61,25 @@ const Navigation = () => {
       >
         <Container>
           <NavDropdown title="All-Brands" id="collasible-nav-dropdown">
-            <NavDropdown.Item as={Link} to="/apple">
+            <NavDropdown.Item as={Link} to="/brands-product/Apple">
               Apple
             </NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/samsung">
+            <NavDropdown.Item as={Link} to="/brands-product/Samsung">
               Samsung
             </NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/huawei">
+            <NavDropdown.Item as={Link} to="/brands-product/Huawei">
               Huawei
             </NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/oppo">
+            <NavDropdown.Item as={Link} to="/brands-product/Oppo">
               Oppo
             </NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/vivo">
+            <NavDropdown.Item as={Link} to="/brands-product/Vivo">
               Vivo
             </NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/xiaomi">
+            <NavDropdown.Item as={Link} to="/brands-product/Xiaomi">
               Xiaomi
             </NavDropdown.Item>
-            <NavDropdown.Item as={Link} to="/realme">
+            <NavDropdown.Item as={Link} to="/brands-product/Realme">
               Realme
             </NavDropdown.Item>
           </NavDropdown>

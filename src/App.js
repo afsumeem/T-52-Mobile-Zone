@@ -11,28 +11,30 @@ import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import DetailsProduct from "./Pages/DetailsProduct/DetailsProduct";
 import Carts from "./Pages/Carts/Carts/Carts";
 import Blogs from "./Pages/Blogs/Blogs/Blogs";
+import BrandProducts from "./Pages/BrandProducts/BrandProducts/BrandProducts";
 
 function App() {
-  return (
-    <div className="App">
-      <AuthProvider>
-        <Router>
-          <Navigation></Navigation>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/home/:productInfo" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/detailsProduct" element={<DetailsProduct />} />
-            <Route path="/cart" element={<Carts />} />
-            <Route path="/blog" element={<Blogs />} />
-          </Routes>
-          <Footer></Footer>
-        </Router>
-      </AuthProvider>
-    </div>
-  );
+    return (
+        <div className="App">
+            <AuthProvider>
+                <Router>
+                    <Navigation></Navigation>
+                    <Routes>
+                        <Route exact path="/" element={<Home />} />
+                        <Route path="/home" element={<Home />} />
+                        <Route path="/home/:productInfo" element={<Home />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/register" element={<Register />} />
+                        <Route path="/detailsProduct" element={<DetailsProduct />} />
+                        <Route path="/cart" element={<Carts />} />
+                        <Route path="/blog" element={<Blogs />} />
+                        <Route path="/brands-product/:brand" element={<BrandProducts />} />
+                    </Routes>
+                    <Footer></Footer>
+                </Router>
+            </AuthProvider>
+        </div>
+    );
 }
 
 export default App;
