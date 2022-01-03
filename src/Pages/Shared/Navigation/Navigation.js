@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navigation.css";
-import { Badge, Button, Container, Form, FormControl, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Badge, Button, Col, Container, Form, FormControl, Nav, Navbar, NavDropdown, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
@@ -94,9 +94,11 @@ const Navigation = () => {
               <Nav.Link as={Link} to="/shop">
                 Shop
               </Nav.Link>
+
               <Nav.Link as={Link} to="/category">
                 Category
               </Nav.Link>
+
               <Nav.Link as={Link} to="/blog">
                 Blogs
               </Nav.Link>
@@ -138,7 +140,7 @@ const Navigation = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </div>
+    </div >
   );
 };
 
