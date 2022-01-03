@@ -1,14 +1,14 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import './AboutBanner.css';
+import './OurTeamBanner.css';
 
-const AboutBanner = () => {
+const OurTeamBanner = () => {
     return (
-        <div className='topAbout-banner text-white relative'>
+        <div className='team-banner text-white relative'>
             <div className='absolute banner-title special-font'>
                 <Container>
                     <div className='text'>
-                        <h1 className='title-head'>ABOUT OUR SHOP</h1>
+                        <h1 className='title-head'>MEET OUR TEAM</h1>
                         <div className='top-line'></div>
                     </div>
                 </Container>
@@ -17,4 +17,4 @@ const AboutBanner = () => {
     );
 };
 
-export default AboutBanner;
+export default OurTeamBanner;

@@ -9,6 +9,7 @@ import Login from "./Pages/Login/Login";
 import Register from "./Pages/Login/Register";
 import AuthProvider from "./contexts/AuthProvider/AuthProvider";
 import DetailsProduct from "./Pages/DetailsProduct/DetailsProduct";
+import About from "./Pages/About/About";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/home/:productInfo" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/about" element={<About />} />
             <Route path="/detailsProduct" element={<DetailsProduct />} />
           </Routes>
           <Footer></Footer>
