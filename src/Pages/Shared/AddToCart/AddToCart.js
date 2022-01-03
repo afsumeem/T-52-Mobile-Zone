@@ -43,7 +43,8 @@ function OffCanvasExample({ name, ...props }) {
                 </Offcanvas.Body>
                 <div className="cart_footer">
                     <Link to="/cart"><Button className="btn_regular">View Cart</Button></Link>
-                    <Button className="btn_regular">Checkout</Button>
+                    <Link to="/checkout"><Button className="btn_regular">Checkout</Button></Link>
+
                 </div>
             </Offcanvas>
         </>
