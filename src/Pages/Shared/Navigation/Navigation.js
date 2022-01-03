@@ -1,21 +1,19 @@
-import React, { useReducer } from "react";
+import React from "react";
 import "./Navigation.css";
 import { Badge, Button, Container, Form, FormControl, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import useFirebase from "../../Hooks/useFirebase";
+import AddToCart from "../AddToCart/AddToCart";
 
-const shoppingCart = <FontAwesomeIcon icon={faShoppingCart} />;
 const hardIcon = <FontAwesomeIcon icon={faHeart} />;
 const userIcon = <FontAwesomeIcon icon={faUserCircle} />;
-const faBarsIcon = <FontAwesomeIcon icon={faBars} />;
 
 const Navigation = () => {
   const { user, logOut } = useFirebase();
+
   return (
     <div>
       {/* top navbar */}
@@ -41,13 +39,13 @@ const Navigation = () => {
               </Form>
             </Nav>
             <Nav>
-              <Nav.Link eventKey={2} href="#memes">
+              <Nav.Link as={Link} eventKey={2} to="/account">
                 My Account
               </Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
+              <Nav.Link as={Link} eventKey={2} to="/cart">
                 Cart
               </Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
+              <Nav.Link as={Link} eventKey={2} to="/checkout">
                 Checkout
               </Nav.Link>
             </Nav>
@@ -97,7 +95,7 @@ const Navigation = () => {
               <Nav.Link as={Link} to="/category">
                 Category
               </Nav.Link>
-              <Nav.Link as={Link} to="/blogs">
+              <Nav.Link as={Link} to="/blog">
                 Blogs
               </Nav.Link>
               <Nav.Link as={Link} to="/about">
@@ -106,13 +104,10 @@ const Navigation = () => {
             </Nav>
             <Nav>
               <Nav.Link className="total_price">USD: $00.00</Nav.Link>
-              <Nav.Link className="nav_icon" href="#deets">
-                {shoppingCart}
-                <Badge>0</Badge>
-              </Nav.Link>
+              <AddToCart></AddToCart>
               <Nav.Link className="nav_icon" href="#deets">
                 {hardIcon}
-                <Badge>0</Badge>
+                <Badge>8</Badge>
               </Nav.Link>
 
               {/* user */}
