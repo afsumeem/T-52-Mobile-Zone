@@ -14,7 +14,7 @@ import Checkout from "./Pages/Checkout/Checkout";
 import AddNewBlog from "./Pages/Dashboard/AddNewBlog/AddNewBlog";
 import Login from "./Pages/Login/Login/Login";
 import Register from "./Pages/Login/Register/Register";
-import About from "./Pages/About/About";
+import Shop from "./Pages/Shop/Shop/Shop";
 import AddNewProduct from "./Pages/Dashboard/AddNewProduct/AddNewProduct";
 
 function App() {
@@ -29,16 +29,14 @@ function App() {
             <Route path="/home/:productInfo" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/about" element={<About />} />
             <Route path="/detailsProduct" element={<DetailsProduct />} />
             <Route path="/cart" element={<Carts />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/blog" element={<Blogs />} />
-
             <Route path="/addBlog" element={<AddNewBlog />} />
             <Route path="/addProduct" element={<AddNewProduct />} />
-
             <Route path="/brands-product/:brand" element={<BrandProducts />} />
+            <Route path="/shop" element={<Shop />} />
           </Routes>
           <Footer></Footer>
         </Router>
