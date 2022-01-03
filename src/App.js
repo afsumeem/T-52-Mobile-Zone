@@ -16,6 +16,7 @@ import Login from "./Pages/Login/Login/Login";
 import Register from "./Pages/Login/Register/Register";
 import Shop from "./Pages/Shop/Shop/Shop";
 import AddNewProduct from "./Pages/Dashboard/AddNewProduct/AddNewProduct";
+import MyAccount from "./Pages/MyAccount/MyAccount";
 
 function App() {
   return (
@@ -37,6 +38,11 @@ function App() {
             <Route path="/addProduct" element={<AddNewProduct />} />
             <Route path="/brands-product/:brand" element={<BrandProducts />} />
             <Route path="/shop" element={<Shop />} />
+
+            <Route path="/addBlog" element={<AddNewBlog />} />
+
+            <Route path="/brands-product/:brand" element={<BrandProducts />} />
+            <Route path="/account" element={<MyAccount />} />
           </Routes>
           <Footer></Footer>
         </Router>

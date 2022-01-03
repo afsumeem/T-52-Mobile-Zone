@@ -7,7 +7,7 @@ const Register = () => {
   const [loginData, setLoginData] = useState({});
   const { registerUser, signInWithGoogle } = useFirebase();
 
-  const location = useLocation();
+  //   const location = useLocation();
   const navigate = useNavigate();
 
   const handleOnChange = (e) => {
@@ -23,12 +23,12 @@ const Register = () => {
     if (loginData.password !== loginData.password2) {
       alert("your password did not match");
     }
-    registerUser(loginData.email, loginData.password, loginData.name, location, navigate);
+    registerUser(loginData.email, loginData.password, loginData.name, navigate);
+    alert("register successfull");
     e.preventDefault();
   };
-
   const handleGoogleSignIn = () => {
-    signInWithGoogle(location, navigate);
+    signInWithGoogle(navigate);
   };
 
   return (
@@ -43,16 +43,24 @@ const Register = () => {
               <h3>Register</h3>
             </div>
             <form onSubmit={handleRegisterSubmit}>
-              <label htmlFor="name">Full Name <span>*</span></label>
+              <label htmlFor="name">
+                Full Name <span>*</span>
+              </label>
               <input onChange={handleOnChange} type="name" name="name" id="name" placeholder="Enter your full Name" required />
 
-              <label htmlFor="email">Email Address <span>*</span></label>
+              <label htmlFor="email">
+                Email Address <span>*</span>
+              </label>
               <input onChange={handleOnChange} type="email" name="email" id="email" placeholder="Enter your email" required />
 
-              <label htmlFor="password">Password <span>*</span></label>
+              <label htmlFor="password">
+                Password <span>*</span>
+              </label>
               <input onChange={handleOnChange} type="password" name="password" id="password" placeholder="Enter your password" required />
 
-              <label htmlFor="re_pass">Confirm Password <span>*</span></label>
+              <label htmlFor="re_pass">
+                Confirm Password <span>*</span>
+              </label>
               <input
                 onChange={handleOnChange}
                 type="password"
@@ -67,7 +75,9 @@ const Register = () => {
                   Register
                 </Button>
                 <Link to="/login">
-                  <Button className="btn_regular" variant="text">Login</Button>
+                  <Button className="btn_regular" variant="text">
+                    Login
+                  </Button>
                 </Link>
               </div>
 
