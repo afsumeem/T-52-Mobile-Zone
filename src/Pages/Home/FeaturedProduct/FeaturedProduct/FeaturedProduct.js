@@ -48,7 +48,7 @@ const FeaturedProduct = ({ product }) => {
 
               <Modal.Footer className="justify-content-between">
                 <span className="product_price">${price}</span>
-                <Button className="btn_regular" variant="primary">
+                <Button onClick={() => handleSaveProduct(product)} className="btn_regular" variant="primary">
                   Add To Cart
                 </Button>
               </Modal.Footer>

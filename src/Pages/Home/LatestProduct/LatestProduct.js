@@ -14,7 +14,6 @@ const LatestProduct = ({ product }) => {
                 if (res.data.insertedId) {
                     alert('product added successfully!');
                 }
-
             })
     }
 
@@ -47,7 +46,7 @@ const LatestProduct = ({ product }) => {
                                 <span className="product_price">
                                     ${price}
                                 </span>
-                                <Button className="btn_regular" variant="primary">Add To Cart</Button>
+                                <Button onClick={() => handleSaveProduct(product)} className="btn_regular" variant="primary">Add To Cart</Button>
                             </Modal.Footer>
                         </div>
                     </div>
