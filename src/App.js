@@ -18,6 +18,7 @@ import Shop from "./Pages/Shop/Shop/Shop";
 import AddNewProduct from "./Pages/Dashboard/AddNewProduct/AddNewProduct";
 import MyAccount from "./Pages/MyAccount/MyAccount";
 import About from "./Pages/About/About";
+import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -36,9 +37,30 @@ function App() {
             <Route path="/blog" element={<Blogs />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/about" element={<About />} />
-            <Route path="/account" element={<MyAccount />} />
-            <Route path="/addBlog" element={<AddNewBlog />} />
-            <Route path="/addProduct" element={<AddNewProduct />} />
+            <Route
+              path="/account"
+              element={
+                <PrivateRoute>
+                  <MyAccount />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/addBlog"
+              element={
+                <PrivateRoute>
+                  <AddNewBlog />
+                </PrivateRoute>
+              }
+            />
+            <Route
+              path="/addProduct"
+              element={
+                <PrivateRoute>
+                  <AddNewProduct />
+                </PrivateRoute>
+              }
+            />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Routes>
