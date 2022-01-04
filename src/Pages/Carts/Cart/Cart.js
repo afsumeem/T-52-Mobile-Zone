@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Button, Modal } from 'react-bootstrap';
 import './Cart.css';
+import { useSelector, useDispatch } from "react-redux";
+import { incQuantity, decQuantity } from '../../../Redux/actions/index';
 
 const closeIcon = <FontAwesomeIcon icon={faTimes} />;
 
@@ -12,6 +14,10 @@ const Cart = ({ product }) => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleNoBtn = () => setShow(false);
+
+    const quantityState = useSelector((state) => state.quantityChange);
+    console.log(quantityState);
+    const dispatch = useDispatch();
 
     const handleDeleteOrder = id => {
         const url = `https://safe-coast-68587.herokuapp.com/saveProduct/${id}`
@@ -40,7 +46,14 @@ const Cart = ({ product }) => {
                 </td>
                 <td>
                     <div style={{ position: 'relative' }}>
-                        <span style={{ position: 'absolute', top: '50%', Left: '50%', transform: 'translate(-50%, 80%)' }}>01</span>
+                        <span style={{ position: 'absolute', top: '50%', Left: '50%', transform: 'translate(-50%, 80%)' }}>
+
+                            <a href="#dfj" style={{ textDecoration: "none" }} onClick={() => dispatch(decQuantity())}><span>-</span></a>
+
+                            <input style={{ width: "30px", textAlign: "center", border: "none" }} name="quantity" value={quantityState} />
+
+                            <a href="#fkd" style={{ textDecoration: "none" }} onClick={() => dispatch(incQuantity())}><span>+</span></a>
+                        </span>
                     </div>
                 </td>
                 <td>

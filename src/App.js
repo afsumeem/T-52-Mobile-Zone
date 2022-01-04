@@ -15,6 +15,7 @@ import AddNewBlog from "./Pages/Dashboard/AddNewBlog/AddNewBlog";
 import Login from "./Pages/Login/Login/Login";
 import Register from "./Pages/Login/Register/Register";
 import MyAccount from "./Pages/MyAccount/MyAccount";
+import Shop from './Pages/Shop/Shop/Shop';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             <Route path="/cart" element={<Carts />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/blog" element={<Blogs />} />
+            <Route path="/shop" element={<Shop />} />
 
             <Route path="/addBlog" element={<AddNewBlog />} />
 
