@@ -2,15 +2,17 @@
 
  [Live Site of T-52 Mobile Zone](https://mobile-zone-by-team-52.netlify.app/).
 
-*Technology Used
-- React.js
-- MongoDB
-- Node.js
-- Express.js
-- React Hook Form
-- React Bootstrap
-- Dotenv
+** Technology Used
 
+<li>React.js</li>
+<li>MongoDB</li>
+<li>Node.js</li>
+<li>Express.js</li>
+<li>React Hook Form</li>
+<li>React Bootstrap</li>
+<li>Dotenv</li>
+<li>Font Awesome</li>
+<li>Firebase,</li>
 
 
 * Responsive Design
