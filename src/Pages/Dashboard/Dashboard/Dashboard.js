@@ -1,70 +1,78 @@
-import { faSignOutAlt, faUser, faUsersCog, faUserShield } from '@fortawesome/free-solid-svg-icons';
+import { faSignOutAlt, faUser, faCartPlus, faThLarge, faEdit, faCog, faUserShield } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Col, Navbar, Row } from 'react-bootstrap';
+import { Col, Container, Navbar, Row } from 'react-bootstrap';
 import { NavLink, Outlet } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
+import './Dashboard.css';
 
 const Dashboard = () => {
     const { user, logOut } = useAuth()
     return (
         <div>
+            <Container fluid>
+                <Row>
+                    <Col md={3} className="d-flex justify-content-center">
+                        <div className="dashboard_left_box py-5 mt-4">
+                            <div className="dashboard_items">
+                                <NavLink to='/dashboard' className="btn_regular">
+                                    <FontAwesomeIcon className="dash_icon" icon={faThLarge} />
+                                    Dashboard
+                                </NavLink>
+                            </div>
 
-            <Row>
-                <Col md={3}>
-                    <div className='d-flex flex-column'>
-                        <NavLink to='/dashboard' className="text-dark fs-4 fw-bolder my-1 text-decoration-none">
-                            <FontAwesomeIcon className=" me-2" icon={faUsersCog} />
-                            Dashboard
-                        </NavLink>
+                            <div className="dashboard_items">
+                                <NavLink to='/dashboard/makeAdmin' className="btn_regular">
+                                    <FontAwesomeIcon className="dash_icon" icon={faUserShield} />
+                                    Make Admin
+                                </NavLink>
+                            </div>
 
+                            <div className="dashboard_items">
+                                <NavLink to='/dashboard/addProduct' className="btn_regular">
+                                    <FontAwesomeIcon className="dash_icon" icon={faCartPlus} />
+                                    Add New Product
+                                </NavLink>
+                            </div>
 
-                        <NavLink to='/dashboard/makeAdmin' className='text-decoration-none ms-5 fw-bolder fs-6 text-dark'>
-                            <FontAwesomeIcon className="me-2" icon={faUserShield} />
-                            Make Admin
-                        </NavLink>
+                            <div className="dashboard_items">
+                                <NavLink to='/dashboard/addBlog' className="btn_regular">
+                                    <FontAwesomeIcon className="dash_icon" icon={faEdit} />
+                                    Write New Blog
+                                </NavLink>
+                            </div>
 
-                        <NavLink to='/dashboard/addProduct' className='text-decoration-none ms-5 fw-bolder fs-6 text-dark'>
-                            <FontAwesomeIcon className="me-2" icon={faUserShield} />
-                            Add new Product
-                        </NavLink>
+                            <div className="dashboard_items">
+                                <NavLink to='/dashboard/manageProduct' className="btn_regular">
+                                    <FontAwesomeIcon className="dash_icon" icon={faCog} />
+                                    Manage Products
+                                </NavLink>
+                            </div>
 
+                            <div className="user_info btn_regular">
+                                <div className="user_name">
+                                    <FontAwesomeIcon className="dash_icon" icon={faUser} />
+                                    <span>
+                                        {user.displayName && user.displayName}
+                                    </span>
+                                </div>
 
-                        <NavLink to='/dashboard/addBlog' className='text-decoration-none ms-5 fw-bolder fs-6 text-dark'>
-                            <FontAwesomeIcon className="me-2" icon={faUserShield} />
-                            Add New Blog
-                        </NavLink>
+                                <div className="user_logout">
+                                    <NavLink onClick={logOut} className="logout_btn" to="/home">
+                                        <FontAwesomeIcon className="dash_icon" icon={faSignOutAlt} />
+                                        Log Out
+                                    </NavLink>
+                                </div>
+                            </div>
+                        </div>
+                    </Col>
 
-
-                        <NavLink to='/dashboard/manageProduct' className='text-decoration-none ms-5 fw-bolder fs-6 text-dark'>
-                            <FontAwesomeIcon className="me-2" icon={faUserShield} />
-                            Manage Products
-                        </NavLink>
-
-
-                        <Navbar.Text className="ms-5 fs-5 my-1  fw-bolder me-auto" style={{ 'color': '#c13f22' }}>
-                            <FontAwesomeIcon className=" me-2" icon={faUser} />
-                            <span style={{ 'color': '#c13f22' }}>
-                                {user.displayName && user.displayName}
-                            </span>
-                        </Navbar.Text>
-
-                        <NavLink onClick={logOut} className="text-decoration-none ms-5 text-dark fw-bolder fs-6" to="/home">
-                            <FontAwesomeIcon className="me-2" icon={faSignOutAlt} />
-                            Logout
-                        </NavLink>
-                    </div>
-                </Col>
-
-
-                <Col md={9}>
-                    {/* dashboard all routes content */}
-                    <Outlet />
-                </Col>
-
-            </Row>
-
-
+                    <Col md={9}>
+                        {/* dashboard all routes content */}
+                        <Outlet />
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 };
