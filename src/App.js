@@ -63,7 +63,6 @@ function App() {
                 }
               />
 
-
               <Route
                 path={`/dashboard/addProduct`}
                 element={
@@ -73,7 +72,6 @@ function App() {
                 }
               />
 
-
               <Route
                 path={`/dashboard/makeAdmin`}
                 element={
@@ -82,7 +80,6 @@ function App() {
                   </AdminRoute>
                 }
               />
-
 
               <Route
                 path={`/dashboard/manageProduct`}
@@ -96,7 +93,6 @@ function App() {
               {/* <Route path={`/dashboard/manageOrder`} element={<AdminRoute><ManageAllOrders /></AdminRoute>} /> */}
 
             </Route>
-
 
             <Route
               path="/account"
