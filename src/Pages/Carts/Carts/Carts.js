@@ -11,7 +11,7 @@ const Carts = () => {
 
     //fetch cartProducts API 
     useEffect(() => {
-        fetch('https://safe-coast-68587.herokuapp.com/saveProduct')
+        fetch('https://safe-coast-68587.herokuapp.com/cartProduct')
             .then(res => res.json())
             .then(data => setCartProducts(data));
     }, [cartProducts]);

@@ -6,10 +6,14 @@ import useAuth from "../../Hooks/useAuth";
 
 const ShopProduct = ({ product }) => {
     const { id, name, brand, price, picture, display, camera, battery } = product;
-    const { user } = useAuth()
-    const handleSaveProduct = productData => {
-        productData.email = user.email;
-        axios.post('https://safe-coast-68587.herokuapp.com/saveProduct', productData)
+    const { user } = useAuth();
+
+    const { email } = user;
+    const newProductData = { id, email, name, brand, price, picture, display, camera, battery }
+
+    const handleSaveProduct = () => {
+
+        axios.post('https://safe-coast-68587.herokuapp.com/cartProduct', newProductData)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('product added successfully!');
@@ -48,7 +52,7 @@ const ShopProduct = ({ product }) => {
 
                             <Modal.Footer className="justify-content-between">
                                 <span className="product_price">${price}</span>
-                                <Button onClick={() => handleSaveProduct(product)} className="btn_regular" variant="primary">
+                                <Button onClick={() => handleSaveProduct()} className="btn_regular" variant="primary">
                                     Add To Cart
                                 </Button>
                             </Modal.Footer>
@@ -75,7 +79,7 @@ const ShopProduct = ({ product }) => {
                     </Card.Title>
                     <div className="content_box mt-3">
                         <span className="product_price">${price}</span>
-                        <Button onClick={() => handleSaveProduct(product)} className="btn_regular" variant="primary">
+                        <Button onClick={() => handleSaveProduct()} className="btn_regular" variant="primary">
                             Add To Cart
                         </Button>
                     </div>

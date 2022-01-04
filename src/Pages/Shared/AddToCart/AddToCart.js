@@ -21,12 +21,12 @@ function OffCanvasExample({ name, ...props }) {
 
     //fetch savedProduct API 
     useEffect(() => {
-        fetch('https://safe-coast-68587.herokuapp.com/saveProduct')
+        fetch('https://safe-coast-68587.herokuapp.com/cartProduct')
             .then(res => res.json())
             .then(data => setSaveProducts(data));
     }, [saveProducts]);
 
-    const UsersProduct = saveProducts.filter(product => user.email === product.email)
+    const UsersProduct = saveProducts.filter(product => product.email === user.email)
 
     return (
         <>

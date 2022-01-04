@@ -11,8 +11,9 @@ const LatestProduct = ({ product }) => {
   const { email } = user;
   const newProductData = { name, email, price, brand, picture, display, camera, battery };
 
+
   const handleSaveProduct = () => {
-    axios.post("http://localhost:5000/cartProduct", newProductData)
+    axios.post("https://safe-coast-68587.herokuapp.com/cartProduct", newProductData)
       .then((res) => {
         if (res.data.insertedId) {
           alert("product added successfully!");
@@ -80,7 +81,7 @@ const LatestProduct = ({ product }) => {
           </Card.Title>
           <div className="content_box mt-3">
             <span className="product_price">${price}</span>
-            <Button onClick={() => handleSaveProduct(product)} className="btn_regular" variant="primary">
+            <Button onClick={() => handleSaveProduct()} className="btn_regular" variant="primary">
               Add To Cart
             </Button>
           </div>
