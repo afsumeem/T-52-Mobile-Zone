@@ -10,6 +10,9 @@ const LatestProduct = ({ product }) => {
 
   const handleSaveProduct = (productData) => {
     productData.email = user.email
+
+    //const user = { email }
+
     axios.post("https://safe-coast-68587.herokuapp.com/saveProduct", productData)
       .then((res) => {
         if (res.data.insertedId) {

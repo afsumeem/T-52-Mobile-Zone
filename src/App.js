@@ -19,6 +19,9 @@ import AddNewProduct from "./Pages/Dashboard/AddNewProduct/AddNewProduct";
 import MyAccount from "./Pages/MyAccount/MyAccount";
 import About from "./Pages/About/About";
 import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
+import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
+import MakeAdmin from "./Pages/Dashboard/MakeAdmin/MakeAdmin";
+import ManageProducts from "./Pages/Dashboard/ManageProducts/ManageProducts";
 
 function App() {
   return (
@@ -37,6 +40,53 @@ function App() {
             <Route path="/blog" element={<Blogs />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/about" element={<About />} />
+
+            <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} >
+
+              <Route
+                path={`/dashboard/addBlog`}
+                element={
+                  <PrivateRoute>
+                    <AddNewBlog />
+                  </PrivateRoute>
+                }
+              />
+
+
+              <Route
+                path={`/dashboard/addProduct`}
+                element={
+                  <PrivateRoute>
+                    <AddNewProduct />
+                  </PrivateRoute>
+                }
+              />
+
+
+              <Route
+                path={`/dashboard/makeAdmin`}
+                element={
+                  <PrivateRoute>
+                    <MakeAdmin />
+                  </PrivateRoute>
+                }
+              />
+
+
+              <Route
+                path={`/dashboard/manageProduct`}
+                element={
+                  <PrivateRoute>
+                    <ManageProducts />
+                  </PrivateRoute>
+                }
+              />
+
+              {/* <Route path={`/dashboard/manageOrder`} element={<AdminRoute><ManageAllOrders /></AdminRoute>} /> */}
+
+            </Route>
+
+
             <Route
               path="/account"
               element={
@@ -45,22 +95,7 @@ function App() {
                 </PrivateRoute>
               }
             />
-            <Route
-              path="/addBlog"
-              element={
-                <PrivateRoute>
-                  <AddNewBlog />
-                </PrivateRoute>
-              }
-            />
-            <Route
-              path="/addProduct"
-              element={
-                <PrivateRoute>
-                  <AddNewProduct />
-                </PrivateRoute>
-              }
-            />
+
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
           </Routes>
