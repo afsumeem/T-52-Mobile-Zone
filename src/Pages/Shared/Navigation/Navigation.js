@@ -15,7 +15,7 @@ const userIcon = <FontAwesomeIcon icon={faUserCircle} />;
 const barsIcon = <FontAwesomeIcon icon={faBars} />;
 
 const Navigation = () => {
-  const { user, logOut } = useFirebase();
+  const { user, admin, logOut } = useFirebase();
 
   return (
     <div>
@@ -108,6 +108,14 @@ const Navigation = () => {
               <Nav.Link as={Link} to="/about">
                 About
               </Nav.Link>
+              {
+                admin &&
+
+                <Nav.Link as={Link} to="/dashboard">
+                  Dashboard
+                </Nav.Link>
+              }
+
             </Nav>
             <Nav style={{ marginBottom: '11px' }}>
               <Nav.Link className="total_price">USD: $00.00</Nav.Link>

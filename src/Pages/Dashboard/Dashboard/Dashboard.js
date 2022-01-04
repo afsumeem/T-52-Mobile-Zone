@@ -58,7 +58,7 @@ const Dashboard = () => {
 
 
                 <Col md={9}>
-                    {/* dashboard all route route contents */}
+                    {/* dashboard all routes content */}
                     <Outlet />
                 </Col>
 

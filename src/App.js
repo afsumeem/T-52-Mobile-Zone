@@ -22,6 +22,7 @@ import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 import MakeAdmin from "./Pages/Dashboard/MakeAdmin/MakeAdmin";
 import ManageProducts from "./Pages/Dashboard/ManageProducts/ManageProducts";
+import AdminRoute from "./Pages/AdminRoute/AdminRoute";
 
 function App() {
   return (
@@ -46,9 +47,9 @@ function App() {
               <Route
                 path={`/dashboard/addBlog`}
                 element={
-                  <PrivateRoute>
+                  <AdminRoute>
                     <AddNewBlog />
-                  </PrivateRoute>
+                  </AdminRoute>
                 }
               />
 
@@ -56,9 +57,9 @@ function App() {
               <Route
                 path={`/dashboard/addProduct`}
                 element={
-                  <PrivateRoute>
+                  <AdminRoute>
                     <AddNewProduct />
-                  </PrivateRoute>
+                  </AdminRoute>
                 }
               />
 
@@ -66,9 +67,9 @@ function App() {
               <Route
                 path={`/dashboard/makeAdmin`}
                 element={
-                  <PrivateRoute>
+                  <AdminRoute>
                     <MakeAdmin />
-                  </PrivateRoute>
+                  </AdminRoute>
                 }
               />
 
@@ -76,9 +77,9 @@ function App() {
               <Route
                 path={`/dashboard/manageProduct`}
                 element={
-                  <PrivateRoute>
+                  <AdminRoute>
                     <ManageProducts />
-                  </PrivateRoute>
+                  </AdminRoute>
                 }
               />
 
