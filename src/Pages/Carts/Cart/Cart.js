@@ -20,7 +20,7 @@ const Cart = ({ product }) => {
     const dispatch = useDispatch();
 
     const handleDeleteOrder = id => {
-        const url = `https://safe-coast-68587.herokuapp.com/saveProduct/${id}`
+        const url = `https://safe-coast-68587.herokuapp.com/cartProduct/${id}`
 
         fetch(url, {
             method: 'DELETE'

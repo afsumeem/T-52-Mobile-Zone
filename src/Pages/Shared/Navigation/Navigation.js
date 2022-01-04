@@ -1,6 +1,6 @@
 import React from "react";
 import "./Navigation.css";
-import { Badge, Button, Col, Container, Form, FormControl, Nav, Navbar, NavDropdown, Row } from "react-bootstrap";
+import { Badge, Button, Container, Form, FormControl, Nav, Navbar, NavDropdown, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
@@ -8,13 +8,14 @@ import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import useFirebase from "../../Hooks/useFirebase";
 import AddToCart from "../AddToCart/AddToCart";
+import Categorys from "../../Home/Categorys/Categorys";
 
 const hardIcon = <FontAwesomeIcon icon={faHeart} />;
 const userIcon = <FontAwesomeIcon icon={faUserCircle} />;
 const barsIcon = <FontAwesomeIcon icon={faBars} />;
 
 const Navigation = () => {
-  const { user, logOut } = useFirebase();
+  const { user, admin, logOut } = useFirebase();
 
   return (
     <div>
@@ -95,16 +96,26 @@ const Navigation = () => {
                 Shop
               </Nav.Link>
 
-              <Nav.Link as={Link} to="/category">
+              <Nav.Link className="categoy_link" as={Link} to="/home">
                 Category
+                <div className="categoy_dropdown">
+                  <Categorys></Categorys>
+                </div>
               </Nav.Link>
-
               <Nav.Link as={Link} to="/blog">
                 Blogs
               </Nav.Link>
               <Nav.Link as={Link} to="/about">
                 About
               </Nav.Link>
+              {
+                admin &&
+
+                <Nav.Link as={Link} to="/dashboard">
+                  Dashboard
+                </Nav.Link>
+              }
+
             </Nav>
             <Nav style={{ marginBottom: '11px' }}>
               <Nav.Link className="total_price">USD: $00.00</Nav.Link>

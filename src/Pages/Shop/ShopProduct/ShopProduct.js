@@ -2,18 +2,22 @@ import axios from "axios";
 import React from "react";
 import { Button, Card, Modal } from "react-bootstrap";
 import { Link, Link as NavLink } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 const ShopProduct = ({ product }) => {
     const { id, name, brand, price, picture, display, camera, battery } = product;
+    const { user } = useAuth();
 
-    const handleSaveProduct = productData => {
+    const { email } = user;
+    const newProductData = { id, email, name, brand, price, picture, display, camera, battery }
 
-        axios.post('https://safe-coast-68587.herokuapp.com/saveProduct', productData)
+    const handleSaveProduct = () => {
+
+        axios.post('https://safe-coast-68587.herokuapp.com/cartProduct', newProductData)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('product added successfully!');
                 }
-
             })
     }
 
@@ -48,7 +52,7 @@ const ShopProduct = ({ product }) => {
 
                             <Modal.Footer className="justify-content-between">
                                 <span className="product_price">${price}</span>
-                                <Button onClick={() => handleSaveProduct(product)} className="btn_regular" variant="primary">
+                                <Button onClick={() => handleSaveProduct()} className="btn_regular" variant="primary">
                                     Add To Cart
                                 </Button>
                             </Modal.Footer>
@@ -75,7 +79,7 @@ const ShopProduct = ({ product }) => {
                     </Card.Title>
                     <div className="content_box mt-3">
                         <span className="product_price">${price}</span>
-                        <Button onClick={() => handleSaveProduct(product)} className="btn_regular" variant="primary">
+                        <Button onClick={() => handleSaveProduct()} className="btn_regular" variant="primary">
                             Add To Cart
                         </Button>
                     </div>

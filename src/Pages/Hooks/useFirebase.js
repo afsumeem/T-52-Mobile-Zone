@@ -16,6 +16,7 @@ initializeFirebase();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [admin, setAdmin] = useState(false);
 
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
@@ -31,7 +32,7 @@ const useFirebase = () => {
         // save user to the database
         saveUser(email, name, "POST");
       })
-      .catch((error) => {})
+      .catch((error) => { })
 
       .finally(() => setIsLoading(false));
   };
@@ -44,7 +45,7 @@ const useFirebase = () => {
         const destination = location?.state?.from || "/home";
         navigate(destination);
       })
-      .catch((error) => {})
+      .catch((error) => { })
       .finally(() => setIsLoading(false));
   };
 
@@ -59,7 +60,7 @@ const useFirebase = () => {
         // save user to the database
         saveUser(user.email, user.displayName, "PUT");
       })
-      .catch((error) => {})
+      .catch((error) => { })
       .finally(() => setIsLoading(false));
   };
 
@@ -100,9 +101,18 @@ const useFirebase = () => {
     }).then();
   };
 
+  // check admin
+
+  useEffect(() => {
+    fetch(`https://safe-coast-68587.herokuapp.com/users/${user.email}`)
+      .then(res => res.json())
+      .then(data => setAdmin(data.admin))
+  }, [user.email])
+
   return {
     user,
     isLoading,
+    admin,
     registerUser,
     loginUser,
     signInWithGoogle,

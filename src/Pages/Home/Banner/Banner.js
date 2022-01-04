@@ -1,5 +1,6 @@
 import React from "react";
-import { Button, Carousel } from "react-bootstrap";
+import { Button, Carousel, Nav } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "./Banner.css";
 
 const Banner = () => {
@@ -18,7 +19,9 @@ const Banner = () => {
                                     <span className="product_price">
                                         Price: $450
                                     </span>
-                                    <Button className="btn_regular" variant="primary">Shop Now</Button>
+                                    <Nav.Link as={Link} to="/shop">
+                                        <Button className="btn_regular">Shop Now</Button>
+                                    </Nav.Link>
                                 </div>
                             </div>
                         </div>
@@ -39,14 +42,16 @@ const Banner = () => {
                         <div className="col-md-1"></div>
                         <div className="col-md-5 d-flex align-items-center text-start">
                             <div className="carousel_content">
-                                <h2>Get 30 % OFF</h2>
-                                <h1>Realme GT Neo 2</h1>
-                                <p>50MP AI Camera. All-day Performance. MediaTek Helio G85. 6000mAh Battery.</p>
+                                <h2>Get 10 % OFF</h2>
+                                <h1>iPhone 13 Pro Max</h1>
+                                <p>12 MP, f/1.5, 26mm (wide), 1.9µm, dual pixel PDAF, sensor-shift OIS</p>
                                 <div className="carousel_bottom mt-5">
                                     <span className="product_price">
-                                        Price: $450
+                                        Price: $900
                                     </span>
-                                    <Button className="btn_regular" variant="primary">Shop Now</Button>
+                                    <Nav.Link as={Link} to="/shop">
+                                        <Button className="btn_regular">Shop Now</Button>
+                                    </Nav.Link>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +59,7 @@ const Banner = () => {
                             <div className="slide_img">
                                 <img
                                     className="d-block w-100"
-                                    src="https://i.ibb.co/bgxNYvT/slide-1.png"
+                                    src="https://i.ibb.co/R72YbvW/slide-2.png"
                                     alt="First slide"
                                 />
                             </div>
@@ -68,13 +73,15 @@ const Banner = () => {
                         <div className="col-md-5 d-flex align-items-center text-start">
                             <div className="carousel_content">
                                 <h2>Get 30 % OFF</h2>
-                                <h1>Realme GT Neo 2</h1>
-                                <p>50MP AI Camera. All-day Performance. MediaTek Helio G85. 6000mAh Battery.</p>
+                                <h1>OPPO Reno6 5G</h1>
+                                <p>The Reno6 5G is even easier on the eye with 360° Light-Sensing</p>
                                 <div className="carousel_bottom mt-5">
                                     <span className="product_price">
                                         Price: $450
                                     </span>
-                                    <Button className="btn_regular" variant="primary">Shop Now</Button>
+                                    <Nav.Link as={Link} to="/shop">
+                                        <Button className="btn_regular">Shop Now</Button>
+                                    </Nav.Link>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +89,7 @@ const Banner = () => {
                             <div className="slide_img">
                                 <img
                                     className="d-block w-100"
-                                    src="https://i.ibb.co/bgxNYvT/slide-1.png"
+                                    src="https://i.ibb.co/6rMt61H/slide-3.png"
                                     alt="First slide"
                                 />
                             </div>
