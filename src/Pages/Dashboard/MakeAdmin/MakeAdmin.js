@@ -30,40 +30,29 @@ const MakeAdmin = () => {
         e.preventDefault();
     };
     return (
-        <div className="mt-5">
+        <div className="mt-5 pt-5">
             {/* make admin title */}
-            <h2 className='ms-5'>MAKE AN ADMIN</h2>
+            <h2>MAKE AN ADMIN</h2>
 
             {/* input form for making admin */}
-            <form onSubmit={handleMakeAdmin} className="pt-3">
-
-                <InputGroup className="mb-3 mt-4 w-50 mx-auto">
-
+            <form onSubmit={handleMakeAdmin} className="mt-5">
+                <label className='w-50' style={{ textAlign: 'left' }} htmlFor="email">New Admin Email</label>
+                <InputGroup className="mb-3 pt-1 w-50 mx-auto">
                     <FormControl
-                        placeholder="abc@example.com"
+                        placeholder="Enter new admin email"
                         aria-label="Your Email"
                         aria-describedby="basic-addon2"
                         onBlur={handleOnBlur}
                         type="email"
-
+                        className="py-2"
                     />
-
-
-                    <InputGroup.Text id="basic-addon2"
-                        className="bg-primary bg-opacity-75 ">
-                        <FontAwesomeIcon className="fs-5 text-white mx-3" icon={faUser} />
-                    </InputGroup.Text>
 
                 </InputGroup>
 
-                <br />
-
-
                 <Button variant="primary"
-                    className="w-50 mx-auto d-block mb-3 " style={{ 'background': 'linear-gradient(to right, #b92b27, #1565c0)' }} type="submit">
+                    className="btn_regular w-50 py-2 mt-2" type="submit">
                     Make Admin
                 </Button><br />
-
             </form>
 
 
