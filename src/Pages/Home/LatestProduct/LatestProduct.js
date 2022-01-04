@@ -1,65 +1,21 @@
-<<<<<<< HEAD
-import axios from 'axios';
-import React from 'react';
-import { Button, Card, Modal } from 'react-bootstrap';
-import { Link as NavLink } from 'react-router-dom';
-import useAuth from '../../Hooks/useAuth';
-
-
-const LatestProduct = ({ product }) => {
-    const { user } = useAuth()
-    const { id, name, brand, price, picture, display, camera, battery } = product;
-
-    const handleSaveProduct = productData => {
-        productData.email = user.email;
-        axios.post('https://safe-coast-68587.herokuapp.com/saveProduct', productData)
-            .then(res => {
-                if (res.data.insertedId) {
-                    alert('product added successfully!');
-                }
-            })
-    }
-
-    const url = `/home/${id}`;
-    function MyVerticallyCenteredModal(props) {
-        return (
-            <Modal
-                {...props}
-                size="lg"
-                aria-labelledby="contained-modal-title-vcenter"
-                centered
-            >
-                <div className="product_modal_box row">
-                    <div className="col-md-5 d-flex align-items-center justify-content-center py-4 ps-5">
-                        <img style={{ width: '100%' }} src={picture} alt="" />
-                    </div>
-                    <div className="col-md-7">
-                        <div className="modal_content">
-                            <Modal.Header closeButton>
-                                <Modal.Title id="contained-modal-title-vcenter"><NavLink className="link_style" to={url}>{name}</NavLink>
-                                </Modal.Title>
-                            </Modal.Header>
-                            <Modal.Body>
-                                <h5>Display:<p>{display}</p></h5>
-                                <h5>Camera:<p>{camera}</p></h5>
-                                <h5>Battery:<p>{battery}</p></h5>
-                            </Modal.Body>
-=======
 import axios from "axios";
 import React from "react";
 import { Button, Card, Modal } from "react-bootstrap";
 import { Link as NavLink } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 const LatestProduct = ({ product }) => {
+  const { user } = useAuth()
   const { id, name, brand, price, picture, display, camera, battery } = product;
->>>>>>> 7ec2d5bc96aa24074db298603a72dc915ab61dc5
 
   const handleSaveProduct = (productData) => {
-    axios.post("https://safe-coast-68587.herokuapp.com/saveProduct", productData).then((res) => {
-      if (res.data.insertedId) {
-        alert("product added successfully!");
-      }
-    });
+    productData.email = user.email
+    axios.post("https://safe-coast-68587.herokuapp.com/saveProduct", productData)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("product added successfully!");
+        }
+      });
   };
 
   const url = `/home/${id}`;
