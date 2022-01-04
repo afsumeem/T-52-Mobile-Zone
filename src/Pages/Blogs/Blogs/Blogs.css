@@ -36,7 +36,7 @@
 
 .recent_content{
     border-top: 1px solid var(--gray) !important;
-    background: rgb(255 9 9 / 20%);
+    background: rgb(255 9 9 / 10%);
     transition: all .3s ease-in-out;
 }
 
