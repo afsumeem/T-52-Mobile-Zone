@@ -42,7 +42,7 @@ function App() {
             <Route path="/shop" element={<Shop />} />
             <Route path="/about" element={<About />} />
 
-            <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} >
+            <Route path="/dashboard" element={<AdminRoute><Dashboard /></AdminRoute>} >
 
               <Route
                 path={`/dashboard/addBlog`}
