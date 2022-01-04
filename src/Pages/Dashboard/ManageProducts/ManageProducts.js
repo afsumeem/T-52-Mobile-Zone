@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import AllProducts from '../AllProducts/AllProducts';
 
 const ManageProducts = () => {
+    const [manageProducts, setManageProducts] = useState([]);
+
+    useEffect(() => {
+        fetch('https://safe-coast-68587.herokuapp.com/products')
+            .then(res => res.json())
+            .then(data => setManageProducts(data))
+    }, [manageProducts]);
+
     return (
-        <div>
-            <h2>manage product</h2>
-        </div>
+        <Container fluid>
+            <Row className="mt-5">
+
+                {
+                    manageProducts.map(product => <AllProducts
+                        key={product._id}
+                        product={product}
+                    ></AllProducts>)
+                }
+
+
+            </Row>
+        </Container>
     );
 };
 

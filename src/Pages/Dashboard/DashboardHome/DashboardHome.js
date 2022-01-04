@@ -9,7 +9,7 @@ const DashboardHome = () => {
         fetch('https://safe-coast-68587.herokuapp.com/users')
             .then(res => res.json())
             .then(data => setUsers(data))
-    }, [])
+    }, [users])
 
     return (
         <div className="cart_info my-5 me-5">
@@ -19,6 +19,7 @@ const DashboardHome = () => {
                         <th>Name</th>
                         <th>Email</th>
                         <th>Roll</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
