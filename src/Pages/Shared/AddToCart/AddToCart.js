@@ -26,13 +26,13 @@ function OffCanvasExample({ name, ...props }) {
             .then(data => setSaveProducts(data));
     }, [saveProducts]);
 
-    const UsersProduct = saveProducts.filter(product => product.email === user.email)
+    const UsersProduct = saveProducts.filter(product => user.email === product.email)
 
     return (
         <>
             <Nav.Link onClick={handleShow} className="nav_icon" href="#deets">
                 {shoppingCart}
-                <Badge>{saveProducts.length}</Badge>
+                <Badge>{UsersProduct.length}</Badge>
             </Nav.Link>
             <Offcanvas show={show} onHide={handleClose} {...props}>
                 <Offcanvas.Header closeButton>
