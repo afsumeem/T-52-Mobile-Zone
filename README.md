@@ -2,7 +2,7 @@
 
  [Live Site of T-52 Mobile Zone](https://mobile-zone-by-team-52.netlify.app/).
 
-** Technology Used
+Technology Used
 
 <li>React.js</li>
 <li>MongoDB</li>
@@ -14,6 +14,7 @@
 <li>Font Awesome</li>
 <li>Firebase,</li>
 
+<hr/>
 
 * Responsive Design
 * Clean Code
