@@ -8,11 +8,12 @@ Technology Used
 <li>MongoDB</li>
 <li>Node.js</li>
 <li>Express.js</li>
+<li>Redux</li>
 <li>React Hook Form</li>
 <li>React Bootstrap</li>
 <li>Dotenv</li>
 <li>Font Awesome</li>
-<li>Firebase,</li>
+<li>Firebase</li>
 
 <hr/>
 
