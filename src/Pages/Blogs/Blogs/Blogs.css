@@ -1,0 +1,116 @@
+.recent_box{
+    margin-right: 20px;
+    box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0);
+    transition: all .3s ease-in-out;
+    border: 1px solid var(--gray);
+}
+
+.recent_box:hover{
+    box-shadow: 10px 10px 30px 0px rgb(0 0 0 / 15%);
+}
+
+.recent_top{
+    padding: 14px 0 10px;
+    border-bottom: 1px solid var(--gray);
+}
+
+.recent_img, .recent_text{
+    display: flex;
+    justify-content: center;
+}
+
+.recent_text{
+    text-align: left;
+    flex-direction: column;
+}
+
+.recent_text h6{
+    color: #000;
+}
+
+.recent_text span{
+    font-size: 14px;
+    color: var(--text-gray);
+    font-weight: 300;
+}
+
+.recent_content{
+    border-top: 1px solid var(--gray) !important;
+    background: rgb(255 9 9 / 20%);
+    transition: all .3s ease-in-out;
+}
+
+.blog_card:hover .recent_content{
+    background: rgb(112 112 112 / 12%);
+}
+
+.bolg_writer{
+    color: var(--text-gray);
+    font-style: italic;
+}
+
+.bolg_writer .author{
+    color: var(--red);
+}
+
+.bolg_writer span{
+    font-weight: 300;
+}
+
+.content_box p{
+    font-size: 15px;
+    color: var(--text-gray);
+    margin: 0;
+}
+
+.blog_card .image_box{
+    position: relative;
+    overflow: hidden;
+}
+
+.blog_card .image_box::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(255 9 9 / 20%);
+    top: -100%;
+    left: 0;
+    transition: all .3s ease-in-out;
+}
+
+.blog_card:hover .image_box::after{
+    top: 0;
+}
+
+.blog_card .image_box {
+    padding: 15px 40px !important;
+}
+
+.blog_card a{
+    text-decoration: none;
+}
+
+.blog_card .share_link{
+    position: absolute;
+    background: rgb(0 0 0 / 45%);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.blog_card .share_link:hover{
+    border: 1px solid var(--red);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.blog_card:hover .share_link{
+    opacity: 1;
+}

@@ -1,48 +1,56 @@
 import React, { useEffect, useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+import './Blogs.css';
 import Blog from "../Blog/Blog";
 
 const Blogs = () => {
-    const [bloges, setBloges] = useState([]);
+    const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
         fetch("https://safe-coast-68587.herokuapp.com/blog")
             .then((res) => res.json())
-            .then((data) => setBloges(data));
+            .then((data) => setBlogs(data));
     }, []);
 
     return (
-        <div className="container my-5 pt-4">
-            <div className="section_title ">
-                <h2>Our Blogs ...</h2>
-                <p>Updated with the our blogs</p>
-            </div>
-            <div className="d-flex row">
-                <div className="col-lg-4 border me-3">
-                    <h3 className="py-5">
-                        Recent <span style={{ color: "red" }}>Article</span>
-                    </h3>
-
-                    {bloges.map((bloge) => (
-                        <div>
-                            <div className="d-flex  ">
-                                <div className="col-lg-5">
-                                    <img className="w-100" src={bloge.img} alt="" />
-                                </div>
-                                <div className="col-lg-7 text-start  mt-4">
-                                    <h4 className=" ">{bloge.name}</h4>
-                                    <p className=""> {bloge.date}</p>
-                                </div>
+        <div className="blogs_container my-5 pt-4">
+            <Container>
+                <div className="section_title ">
+                    <h2>Our Blogs ...</h2>
+                    <p>Updated with the our blogs</p>
+                </div>
+                <Row>
+                    <Col xs md={3}>
+                        <div className="recent_box">
+                            <div className="recent_top">
+                                <h5>
+                                    Recent <span style={{ color: "var(--red)" }}>Article</span>
+                                </h5>
                             </div>
-                        </div>
-                    ))}
-                </div>
 
-                <div className="row col-lg-8">
-                    {bloges.map((blog) => (
-                        <Blog key={blog.id} blog={blog}></Blog>
-                    ))}
-                </div>
-            </div>
+                            {blogs.map((blog) => (
+                                <Row className="product_card m-2 py-2">
+                                    <Col xs={4} md={5} className="recent_img">
+                                        <img className="w-100" src={blog.img} alt="" />
+                                    </Col>
+                                    <Col xs={8} md={7} className="recent_text">
+                                        <h6>{blog.name}</h6>
+                                        <span>{blog.date}</span>
+                                    </Col>
+                                </Row>
+                            ))}
+                        </div>
+                    </Col>
+
+                    <Col xs md={9}>
+                        <Row className="g-3">
+                            {blogs.map((blog) => (
+                                <Blog key={blog.id} blog={blog}></Blog>
+                            ))}
+                        </Row>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 };
