@@ -2,18 +2,20 @@ import axios from "axios";
 import React from "react";
 import { Button, Card, Col, Modal } from "react-bootstrap";
 import { Link, Link as NavLink } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 const BrandProduct = ({ product }) => {
+    const { user } = useAuth()
     const { id, name, brand, price, picture, display, camera, battery } = product;
 
-    const handleSaveProduct = productData => {
+    const handleSaveProduct = (productData) => {
+        productData.email = user.email;
 
         axios.post('https://safe-coast-68587.herokuapp.com/saveProduct', productData)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('product added successfully!');
                 }
-
             })
     }
 
@@ -75,6 +77,7 @@ const BrandProduct = ({ product }) => {
                     </Card.Title>
                     <div className="content_box mt-3">
                         <span className="product_price">${price}</span>
+
                         <Button onClick={() => handleSaveProduct(product)} className="btn_regular" variant="primary">
                             Add To Cart
                         </Button>

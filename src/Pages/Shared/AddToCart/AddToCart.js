@@ -5,10 +5,13 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import './AddToCart.css';
 import CartProduct from "../../CartProduct/CartProduct";
 import { Link } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 const shoppingCart = <FontAwesomeIcon icon={faShoppingCart} />;
 
 function OffCanvasExample({ name, ...props }) {
+    const { user } = useAuth();
+
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
@@ -21,7 +24,9 @@ function OffCanvasExample({ name, ...props }) {
         fetch('https://safe-coast-68587.herokuapp.com/saveProduct')
             .then(res => res.json())
             .then(data => setSaveProducts(data));
-    }, [saveProducts])
+    }, [saveProducts]);
+
+    const UsersProduct = saveProducts.filter(product => product.email === user.email)
 
     return (
         <>
@@ -35,7 +40,7 @@ function OffCanvasExample({ name, ...props }) {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     {
-                        saveProducts.map(product => <CartProduct
+                        UsersProduct.map(product => <CartProduct
                             key={product._id}
                             product={product}
                         ></CartProduct>)

@@ -19,13 +19,13 @@ const Checkout = () => {
             .then(data => setSaveProducts(data));
     }, [saveProducts])
 
-    // const totalPrice =
+    const UsersProduct = saveProducts.filter(product => product.email === user.email);
 
 
     // handle submit
     const onSubmit = data => {
         console.log(data)
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://safe-coast-68587.herokuapp.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Successful!!");
@@ -89,10 +89,7 @@ const Checkout = () => {
                     </Col>
                     <Col md={4}>
 
-                        {/* {
 
-                            saveProducts.map(product => product.price)
-                        } */}
 
                         <div className="order_summary">
                             <h4>Order Summary</h4>

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Nav, Row, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 import Cart from '../Cart/Cart';
 import './Carts.css'
 
 const Carts = () => {
+    const { user } = useAuth();
     const [cartProducts, setCartProducts] = useState([]);
 
     //fetch cartProducts API 
@@ -12,7 +14,9 @@ const Carts = () => {
         fetch('https://safe-coast-68587.herokuapp.com/saveProduct')
             .then(res => res.json())
             .then(data => setCartProducts(data));
-    }, [cartProducts])
+    }, [cartProducts]);
+
+    const UsersProduct = cartProducts.filter(product => product.email === user.email);
     return (
         <div className='cart_container'>
             <Container>
@@ -35,7 +39,7 @@ const Carts = () => {
                                 </thead>
                                 <tbody>
                                     {
-                                        cartProducts.map(product => <Cart
+                                        UsersProduct.map(product => <Cart
                                             key={product._id}
                                             product={product}
                                         ></Cart>)
