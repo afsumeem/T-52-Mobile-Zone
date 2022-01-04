@@ -96,7 +96,7 @@ const Navigation = () => {
                 Shop
               </Nav.Link>
 
-              <Nav.Link className="categoy_link" as={Link} to="/category">
+              <Nav.Link className="categoy_link" as={Link} to="/home">
                 Category
                 <div className="categoy_dropdown">
                   <Categorys></Categorys>
