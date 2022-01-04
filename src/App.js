@@ -23,6 +23,7 @@ import Dashboard from "./Pages/Dashboard/Dashboard/Dashboard";
 import MakeAdmin from "./Pages/Dashboard/MakeAdmin/MakeAdmin";
 import ManageProducts from "./Pages/Dashboard/ManageProducts/ManageProducts";
 import AdminRoute from "./Pages/AdminRoute/AdminRoute";
+import DashboardHome from "./Pages/Dashboard/DashboardHome/DashboardHome";
 
 function App() {
   return (
@@ -43,6 +44,15 @@ function App() {
             <Route path="/about" element={<About />} />
 
             <Route path="/dashboard" element={<AdminRoute><Dashboard /></AdminRoute>} >
+
+              <Route
+                exact path={`/dashboard`}
+                element={
+                  <AdminRoute>
+                    <DashboardHome />
+                  </AdminRoute>
+                }
+              />
 
               <Route
                 path={`/dashboard/addBlog`}

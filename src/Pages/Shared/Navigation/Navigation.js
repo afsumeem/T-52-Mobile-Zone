@@ -42,9 +42,18 @@ const Navigation = () => {
               </Form>
             </Nav>
             <Nav>
-              <Nav.Link as={Link} eventKey={2} to="/account">
-                My Account
-              </Nav.Link>
+              {
+                admin ?
+                  <Nav.Link as={Link} to="/dashboard">
+                    Dashboard
+                  </Nav.Link>
+                  :
+                  <Nav.Link as={Link} eventKey={2} to="/account">
+                    My Account
+                  </Nav.Link>
+              }
+
+
               <Nav.Link as={Link} eventKey={2} to="/cart">
                 Cart
               </Nav.Link>
@@ -108,13 +117,6 @@ const Navigation = () => {
               <Nav.Link as={Link} to="/about">
                 About
               </Nav.Link>
-              {
-                admin &&
-
-                <Nav.Link as={Link} to="/dashboard">
-                  Dashboard
-                </Nav.Link>
-              }
 
             </Nav>
             <Nav style={{ marginBottom: '11px' }}>
