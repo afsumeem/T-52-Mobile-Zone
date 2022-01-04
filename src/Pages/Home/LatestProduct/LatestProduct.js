@@ -8,15 +8,15 @@ const LatestProduct = ({ product }) => {
   const { user } = useAuth()
   const { id, name, brand, price, picture, display, camera, battery } = product;
 
-  const handleSaveProduct = (productData) => {
-    productData.email = user.email
+  const { email } = user;
+  const newProductData = { name, email, price, brand, picture, display, camera, battery };
 
-    //const user = { email }
-
-    axios.post("https://safe-coast-68587.herokuapp.com/saveProduct", productData)
+  const handleSaveProduct = () => {
+    axios.post("http://localhost:5000/cartProduct", newProductData)
       .then((res) => {
         if (res.data.insertedId) {
           alert("product added successfully!");
+          console.log(res.data)
         }
       });
   };
@@ -52,7 +52,7 @@ const LatestProduct = ({ product }) => {
 
               <Modal.Footer className="justify-content-between">
                 <span className="product_price">${price}</span>
-                <Button onClick={() => handleSaveProduct(product)} className="btn_regular" variant="primary">
+                <Button onClick={() => handleSaveProduct()} className="btn_regular" variant="primary">
                   Add To Cart
                 </Button>
               </Modal.Footer>
