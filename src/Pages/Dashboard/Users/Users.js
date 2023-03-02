@@ -13,7 +13,7 @@ const Users = ({ user }) => {
     const { displayName, email, role, _id } = user;
 
     const handleDeleteUser = id => {
-        const url = `https://safe-coast-68587.herokuapp.com/users/${id}`
+        const url = `https://mobile-zone.vercel.app/users/${id}`
 
         fetch(url, {
             method: 'DELETE'

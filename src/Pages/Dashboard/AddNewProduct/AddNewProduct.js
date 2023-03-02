@@ -11,7 +11,7 @@ const AddNewProduct = () => {
 
     // handle submit
     const onSubmit = data => {
-        axios.post('https://safe-coast-68587.herokuapp.com/products', data)
+        axios.post('https://mobile-zone.vercel.app/products', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Product Added Successful!!");

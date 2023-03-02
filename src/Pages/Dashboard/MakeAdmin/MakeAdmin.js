@@ -15,7 +15,7 @@ const MakeAdmin = () => {
     const handleMakeAdmin = e => {
         const user = { email };
 
-        fetch('https://safe-coast-68587.herokuapp.com/users/admin', {
+        fetch('https://mobile-zone.vercel.app/users/admin', {
             method: 'PUT',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(user)

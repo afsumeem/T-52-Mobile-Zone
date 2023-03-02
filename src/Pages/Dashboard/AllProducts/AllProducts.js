@@ -13,7 +13,7 @@ const AllProducts = ({ product }) => {
 
     // handle delete product from add to cart
     const handleDeleteProduct = id => {
-        const url = `https://safe-coast-68587.herokuapp.com/products/${id}`
+        const url = `https://mobile-zone.vercel.app/products/${id}`
 
         fetch(url, {
             method: 'DELETE'

@@ -14,7 +14,7 @@ const Checkout = () => {
 
     //fetch savedProduct API 
     useEffect(() => {
-        fetch('https://safe-coast-68587.herokuapp.com/cartProduct')
+        fetch('https://mobile-zone.vercel.app/cartProduct')
             .then(res => res.json())
             .then(data => setSaveProducts(data));
     }, [saveProducts])
@@ -25,7 +25,7 @@ const Checkout = () => {
     // handle submit
     const onSubmit = data => {
         console.log(data)
-        axios.post('https://safe-coast-68587.herokuapp.com/orders', data)
+        axios.post('https://mobile-zone.vercel.app/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Successful!!");

@@ -12,7 +12,7 @@ const BrandProduct = ({ product }) => {
 
 
     const handleSaveProduct = () => {
-        axios.post('https://safe-coast-68587.herokuapp.com/cartProduct', newProductData)
+        axios.post('https://mobile-zone.vercel.app/cartProduct', newProductData)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('product added successfully!');

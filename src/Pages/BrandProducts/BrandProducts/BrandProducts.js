@@ -11,7 +11,7 @@ const BrandProducts = () => {
     const [findBrands, setFindBrands] = useState([]);
 
     useEffect(() => {
-        fetch('https://safe-coast-68587.herokuapp.com/products')
+        fetch('https://mobile-zone.vercel.app/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

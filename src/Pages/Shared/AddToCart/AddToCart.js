@@ -21,7 +21,7 @@ function OffCanvasExample({ name, ...props }) {
 
     //fetch savedProduct API 
     useEffect(() => {
-        fetch('https://safe-coast-68587.herokuapp.com/cartProduct')
+        fetch('https://mobile-zone.vercel.app/cartProduct')
             .then(res => res.json())
             .then(data => setSaveProducts(data));
     }, [saveProducts]);

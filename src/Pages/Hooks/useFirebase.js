@@ -92,7 +92,7 @@ const useFirebase = () => {
   //save user to database
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch("https://safe-coast-68587.herokuapp.com/users", {
+    fetch("https://mobile-zone.vercel.app/users", {
       method: method,
       headers: {
         "content-type": "application/json",
@@ -104,7 +104,7 @@ const useFirebase = () => {
   // check admin
 
   useEffect(() => {
-    fetch(`https://safe-coast-68587.herokuapp.com/users/${user.email}`)
+    fetch(`https://mobile-zone.vercel.app/users/${user.email}`)
       .then(res => res.json())
       .then(data => setAdmin(data.admin))
   }, [user.email])

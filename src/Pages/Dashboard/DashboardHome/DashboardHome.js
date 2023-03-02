@@ -6,7 +6,7 @@ const DashboardHome = () => {
     const [users, setUsers] = useState([]);
     console.log(users)
     useEffect(() => {
-        fetch('https://safe-coast-68587.herokuapp.com/users')
+        fetch('https://mobile-zone.vercel.app/users')
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [users])
