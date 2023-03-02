@@ -13,7 +13,7 @@ const ShopProduct = ({ product }) => {
 
     const handleSaveProduct = () => {
 
-        axios.post('https://mobile-zone.vercel.app/cartProduct', newProductData)
+        axios.post('https://mobile-zone.onrender.com/cartProduct', newProductData)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('product added successfully!');

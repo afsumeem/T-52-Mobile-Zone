@@ -7,7 +7,7 @@ const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
-        fetch("https://mobile-zone.vercel.app/blog")
+        fetch("https://mobile-zone.onrender.com/blog")
             .then((res) => res.json())
             .then((data) => setBlogs(data));
     }, []);

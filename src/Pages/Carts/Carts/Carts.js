@@ -11,7 +11,7 @@ const Carts = () => {
 
     //fetch cartProducts API 
     useEffect(() => {
-        fetch('https://mobile-zone.vercel.app/cartProduct')
+        fetch('https://mobile-zone.onrender.com/cartProduct')
             .then(res => res.json())
             .then(data => setCartProducts(data));
     }, [cartProducts]);

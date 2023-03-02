@@ -15,7 +15,7 @@ const CartProduct = ({ product }) => {
 
     // handle delete product from add to cart
     const handleDeleteOrder = id => {
-        const url = `https://mobile-zone.vercel.app/cartProduct/${id}`
+        const url = `https://mobile-zone.onrender.com/cartProduct/${id}`
 
         fetch(url, {
             method: 'DELETE'

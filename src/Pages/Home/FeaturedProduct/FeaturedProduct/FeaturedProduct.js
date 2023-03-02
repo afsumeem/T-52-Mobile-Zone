@@ -11,7 +11,7 @@ const FeaturedProduct = ({ product }) => {
   const newProductData = { id, email, name, brand, price, picture, display, camera, battery }
 
   const handleSaveProduct = () => {
-    axios.post('https://mobile-zone.vercel.app/cartProduct', newProductData)
+    axios.post('https://mobile-zone.onrender.com/cartProduct', newProductData)
       .then(res => {
         if (res.data.insertedId) {
           alert('product added successfully!');

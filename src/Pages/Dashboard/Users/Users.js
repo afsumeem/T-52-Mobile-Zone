@@ -13,7 +13,7 @@ const Users = ({ user }) => {
     const { displayName, email, role, _id } = user;
 
     const handleDeleteUser = id => {
-        const url = `https://mobile-zone.vercel.app/users/${id}`
+        const url = `https://mobile-zone.onrender.com/users/${id}`
 
         fetch(url, {
             method: 'DELETE'

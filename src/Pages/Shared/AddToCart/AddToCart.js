@@ -21,7 +21,7 @@ function OffCanvasExample({ name, ...props }) {
 
     //fetch savedProduct API 
     useEffect(() => {
-        fetch('https://mobile-zone.vercel.app/cartProduct')
+        fetch('https://mobile-zone.onrender.com/cartProduct')
             .then(res => res.json())
             .then(data => setSaveProducts(data));
     }, [saveProducts]);

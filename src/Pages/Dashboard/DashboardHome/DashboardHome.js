@@ -6,7 +6,7 @@ const DashboardHome = () => {
     const [users, setUsers] = useState([]);
     console.log(users)
     useEffect(() => {
-        fetch('https://mobile-zone.vercel.app/users')
+        fetch('https://mobile-zone.onrender.com/users')
             .then(res => res.json())
             .then(data => setUsers(data))
     }, [users])

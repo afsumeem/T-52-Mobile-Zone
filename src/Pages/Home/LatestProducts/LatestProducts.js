@@ -6,7 +6,7 @@ const LatestProducts = () => {
     const [products, setProducts] = useState([]);
     const [newProducts, setNewProducts] = useState([]);
     useEffect(() => {
-        fetch('https://mobile-zone.vercel.app/products')
+        fetch('https://mobile-zone.onrender.com/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])

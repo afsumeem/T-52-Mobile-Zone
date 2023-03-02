@@ -14,7 +14,7 @@ const Checkout = () => {
 
     //fetch savedProduct API 
     useEffect(() => {
-        fetch('https://mobile-zone.vercel.app/cartProduct')
+        fetch('https://mobile-zone.onrender.com/cartProduct')
             .then(res => res.json())
             .then(data => setSaveProducts(data));
     }, [saveProducts])
@@ -25,7 +25,7 @@ const Checkout = () => {
     // handle submit
     const onSubmit = data => {
         console.log(data)
-        axios.post('https://mobile-zone.vercel.app/orders', data)
+        axios.post('https://mobile-zone.onrender.com/orders', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Successful!!");

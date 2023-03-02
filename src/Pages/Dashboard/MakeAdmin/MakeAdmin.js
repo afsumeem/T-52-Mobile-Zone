@@ -15,7 +15,7 @@ const MakeAdmin = () => {
     const handleMakeAdmin = e => {
         const user = { email };
 
-        fetch('https://mobile-zone.vercel.app/users/admin', {
+        fetch('https://mobile-zone.onrender.com/users/admin', {
             method: 'PUT',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(user)
