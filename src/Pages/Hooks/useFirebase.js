@@ -32,7 +32,7 @@ const useFirebase = () => {
         // save user to the database
         saveUser(email, name, "POST");
       })
-      .catch((error) => { })
+      .catch((error) => {})
 
       .finally(() => setIsLoading(false));
   };
@@ -45,7 +45,7 @@ const useFirebase = () => {
         const destination = location?.state?.from || "/home";
         navigate(destination);
       })
-      .catch((error) => { })
+      .catch((error) => {})
       .finally(() => setIsLoading(false));
   };
 
@@ -60,7 +60,7 @@ const useFirebase = () => {
         // save user to the database
         saveUser(user.email, user.displayName, "PUT");
       })
-      .catch((error) => { })
+      .catch((error) => {})
       .finally(() => setIsLoading(false));
   };
 
@@ -105,9 +105,9 @@ const useFirebase = () => {
 
   useEffect(() => {
     fetch(`https://mobile-zone.onrender.com/users/${user.email}`)
-      .then(res => res.json())
-      .then(data => setAdmin(data.admin))
-  }, [user.email])
+      .then((res) => res.json())
+      .then((data) => setAdmin(data.admin));
+  }, [user.email]);
 
   return {
     user,

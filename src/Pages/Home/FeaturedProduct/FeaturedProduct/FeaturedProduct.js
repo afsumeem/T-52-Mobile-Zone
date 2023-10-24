@@ -5,24 +5,40 @@ import { Link, Link as NavLink } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 
 const FeaturedProduct = ({ product }) => {
-  const { user } = useAuth()
+  const { user } = useAuth();
   const { email } = user;
   const { id, name, brand, price, picture, display, camera, battery } = product;
-  const newProductData = { id, email, name, brand, price, picture, display, camera, battery }
+  const newProductData = {
+    id,
+    email,
+    name,
+    brand,
+    price,
+    picture,
+    display,
+    camera,
+    battery,
+  };
 
   const handleSaveProduct = () => {
-    axios.post('https://mobile-zone.onrender.com/cartProduct', newProductData)
-      .then(res => {
+    axios
+      .post("https://mobile-zone.onrender.com/cartProduct", newProductData)
+      .then((res) => {
         if (res.data.insertedId) {
-          alert('product added successfully!');
+          alert("product added successfully!");
         }
-      })
-  }
+      });
+  };
 
   const url = `/home/${id}`;
   function MyVerticallyCenteredModal(props) {
     return (
-      <Modal {...props} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
+      <Modal
+        {...props}
+        size="lg"
+        aria-labelledby="contained-modal-title-vcenter"
+        centered
+      >
         <div className="product_modal_box row">
           <div className="col-md-5 d-flex align-items-center justify-content-center py-4 ps-5">
             <img style={{ width: "100%" }} src={picture} alt="" />
@@ -50,7 +66,11 @@ const FeaturedProduct = ({ product }) => {
 
               <Modal.Footer className="justify-content-between">
                 <span className="product_price">${price}</span>
-                <Button onClick={() => handleSaveProduct()} className="btn_regular" variant="primary">
+                <Button
+                  onClick={() => handleSaveProduct()}
+                  className="btn_regular"
+                  variant="primary"
+                >
                   Add To Cart
                 </Button>
               </Modal.Footer>
@@ -77,15 +97,25 @@ const FeaturedProduct = ({ product }) => {
           </Card.Title>
           <div className="content_box mt-3">
             <span className="product_price">${price}</span>
-            <Button onClick={() => handleSaveProduct()} className="btn_regular" variant="primary">
+            <Button
+              onClick={() => handleSaveProduct()}
+              className="btn_regular"
+              variant="primary"
+            >
               Add To Cart
             </Button>
           </div>
-          <Button className="quick_view mt-3" onClick={() => setModalShow(true)}>
+          <Button
+            className="quick_view mt-3"
+            onClick={() => setModalShow(true)}
+          >
             Quick View
           </Button>
 
-          <MyVerticallyCenteredModal show={modalShow} onHide={() => setModalShow(false)} />
+          <MyVerticallyCenteredModal
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+          />
         </Card.Body>
       </Card>
     </div>

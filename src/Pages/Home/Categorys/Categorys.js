@@ -1,62 +1,62 @@
-import React from 'react';
-import { Col, Row } from 'react-bootstrap';
-import './Categorys.css'
+import React from "react";
+import { Col, Row } from "react-bootstrap";
+import "./Categorys.css";
 
 const Categorys = () => {
-    return (
-        <div>
-            <Row>
-                <Col md={3}>
-                    <div className="category_items">
-                        <h3>Apple</h3>
-                        <ul>
-                            <li><a href="#">iPhone 13 Pro Max</a></li>
-                            <li><a href="#">iPhone 13 Pro</a></li>
-                            <li><a href="#">iPhone 13 Mini</a></li>
-                            <li><a href="#">iPhone 12 Pro Max</a></li>
-                            <li><a href="#">iPhone 12 Pro</a></li>
-                        </ul>
-                    </div>
-                </Col>
-                <Col md={3}>
-                    <div className="category_items">
-                        <h3>Samsung</h3>
-                        <ul>
-                            <li><a href="#">Samsung S21 Ultra</a></li>
-                            <li><a href="#">Samsung S21</a></li>
-                            <li><a href="#">Samsung 20 Ultra</a></li>
-                            <li><a href="#">Samsung 20</a></li>
-                            <li><a href="#">Samsung S8 Plus</a></li>
-                        </ul>
-                    </div>
-                </Col>
-                <Col md={3}>
-                    <div className="category_items">
-                        <h3>Huawei</h3>
-                        <ul>
-                            <li><a href="#">Huawei Nova 8 Pro</a></li>
-                            <li><a href="#">Huawei Nova 8</a></li>
-                            <li><a href="#">Huawei Mate 30 Pro</a></li>
-                            <li><a href="#">Huawei P30 Pro</a></li>
-                            <li><a href="#">Huawei 13 Pro Max</a></li>
-                        </ul>
-                    </div>
-                </Col>
-                <Col md={3}>
-                    <div className="category_items">
-                        <h3>Realme</h3>
-                        <ul>
-                            <li><a href="#">Realme GT Neo 2</a></li>
-                            <li><a href="#">Realme GT Master</a></li>
-                            <li><a href="#">Realme 13 Pro Max</a></li>
-                            <li><a href="#">Realme 13 Pro Max</a></li>
-                            <li><a href="#">Realme 13 Pro Max</a></li>
-                        </ul>
-                    </div>
-                </Col>
-            </Row>
-        </div>
-    );
+  return (
+    <div>
+      <Row>
+        <Col md={3}>
+          <div className="category_items">
+            <h3>Apple</h3>
+            <ul>
+              <li>iPhone 13 Pro Max</li>
+              <li>iPhone 13 Pro</li>
+              <li>iPhone 13 Mini</li>
+              <li>iPhone 12 Pro Max</li>
+              <li>iPhone 12 Pro</li>
+            </ul>
+          </div>
+        </Col>
+        <Col md={3}>
+          <div className="category_items">
+            <h3>Samsung</h3>
+            <ul>
+              <li>Samsung S21 Ultra</li>
+              <li>Samsung S21</li>
+              <li>Samsung 20 Ultra</li>
+              <li>Samsung 20</li>
+              <li>Samsung S8 Plus</li>
+            </ul>
+          </div>
+        </Col>
+        <Col md={3}>
+          <div className="category_items">
+            <h3>Huawei</h3>
+            <ul>
+              <li>Huawei Nova 8 Pro</li>
+              <li>Huawei Nova 8</li>
+              <li>Huawei Mate 30 Pro</li>
+              <li>Huawei P30 Pro</li>
+              <li>Huawei 13 Pro Max</li>
+            </ul>
+          </div>
+        </Col>
+        <Col md={3}>
+          <div className="category_items">
+            <h3>Realme</h3>
+            <ul>
+              <li>Realme GT Neo</li>
+              <li>Realme GT Master</li>
+              <li>Realme 13 Pro Max</li>
+              <li>Realme 13 Pro Max</li>
+              <li>Realme 13 Pro Max</li>
+            </ul>
+          </div>
+        </Col>
+      </Row>
+    </div>
+  );
 };
 
 export default Categorys;
