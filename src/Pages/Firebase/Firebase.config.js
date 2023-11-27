@@ -9,11 +9,11 @@
 // };
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCkbKu1Ndva5JpP6TdYwA9WtG9zHblO0gM",
-  authDomain: "t-52-mobile-zone.firebaseapp.com",
-  projectId: "t-52-mobile-zone",
-  storageBucket: "t-52-mobile-zone.appspot.com",
-  messagingSenderId: "390285679428",
-  appId: "1:390285679428:web:9efd721abc0e6d9445d511",
+  apiKey: "AIzaSyBouJXXpv5bb7AL-bnIdgnfs8ccwD1JTT8",
+  authDomain: "mobile-zone-bc27f.firebaseapp.com",
+  projectId: "mobile-zone-bc27f",
+  storageBucket: "mobile-zone-bc27f.appspot.com",
+  messagingSenderId: "163061628854",
+  appId: "1:163061628854:web:e0740b3a730d3451140b17",
 };
 export default firebaseConfig;
